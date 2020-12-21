@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::group(['middleware'=>'auth'],function(){
 
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('frontend.pages.index');
 })->name('index');
 Route::get('/email-copy', function () {
