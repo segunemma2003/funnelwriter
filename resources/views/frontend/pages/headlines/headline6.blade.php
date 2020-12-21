@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 @push('style')
-<link rel="stylesheet" href="{{asset('css/headline.css')}}">)
+<link rel="stylesheet" href="{{asset('css/headline.css')}}">
 @endpush
         <!-- Main Content -->
         <main class="main__content">
@@ -20,7 +20,7 @@
                     <li>
                         <a href="{{route('headline4')}}">Fun/Playful</a>
                     </li>
-                    
+
                     <li>
                         <a href="{{route('headline5')}}">How To</a>
                     </li>

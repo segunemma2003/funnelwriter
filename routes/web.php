@@ -160,7 +160,7 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/workhouse', function () {
         return view('frontend.pages.salesLetter.WorkHouse.workhouse');
     })->name('workhouse');
-    
+
 
 });
 
@@ -174,7 +174,7 @@ Route::group(['prefix'=>'trainings'],function(){
 
 });
 Route::get('/video-sales', function () {
-    return view('frontend.pages.video-sales-letterr');
+    return view('frontend.pages.video-sales-letter');
 })->name('video-sales');
 Route::get('/webinar-script', function () {
     return view('frontend.pages.webinar-script');
@@ -184,7 +184,7 @@ Route::get('/webinar-writer', function () {
 })->name('webinar-writer');
 
 Route::get('/funnel', function () {
-    return view('frontend.pages.funnel-launch');
+    return view('frontend.pages.funnel-launch-planner');
 })->name('funnel-launch');
 Route::get('/settings', function () {
     return view('frontend.pages.settings');
