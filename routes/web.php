@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware'=>'auth'],function(){
+
+
 Route::get('/dashboard', function () {
     return view('frontend.pages.index');
 })->name('index');
@@ -190,7 +193,7 @@ Route::get('/settings', function () {
 Route::get('/offer-generator', function () {
     return view('frontend.pages.offer-generator');
 })->name('offer-generator');
-
+});
 Auth::routes();
 
 
