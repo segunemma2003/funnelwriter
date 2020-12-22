@@ -214,20 +214,78 @@ function fillTable(){
   fillBonuses();
   fillProductInfo();
 }
+function exportScript(){
+  let data={
+    "gen_info":localStorage.getItem('allinfo'),
+    "gen_bonus":localStorage.getItem('offerRowsToSave'),
+    "gen_offers":localStorage.getItem('bonusTosave'),
+  }
+  clearData=confirm('Do you want to clear data after download?');
+  if(clearData){
+    localStorage.clear()
+  }
+  console.log(data);
+
+  $.ajax({
+    url: "/offer-generator",
+    data: data,
+    error: function() {
+      $('#info').html('<div  class="panel panel-danger">An error has occurred</div>');
+    },
+    dataType: 'jsonp',
+    success: function(data) {
+      console.log(data)
+      return data;
+    },
+    type: "POST"
+  });
+  
+
+}
+function exportSave(){
+  let data={
+    "gen_info":localStorage.getItem('allinfo'),
+    "gen_bonus":localStorage.getItem('offerRowsToSave'),
+    "gen_offers":localStorage.getItem('bonusTosave'),
+  }
+  clearData=confirm('Do you want to clear data after download?');
+  if(clearData){
+    localStorage.clear()
+  }
+  console.log(data);
+
+}
 
 function fillProductInfo(){
   select("#table-tagline").textContent = select("#tagline").value;
   select("#table-description").textContent = select("#description").value;
   select("#table-benefit").textContent = select("#one-benefit").value;
+
+  allinfo={}
+  allinfo['name']=select("#tagline").value;
+  allinfo['description']=select("#description").value;
+  allinfo['benefit']=select("#one-benefit").value;
+  localStorage.setItem('allinfo',JSON.stringify(allinfo))
+  console.log(JSON.stringify(allinfo))
 }
 
 function fillOffers(){
+  offerRowsTosave=[]
+  
   offerList = [...document.querySelectorAll(".offers .offer")];
+  
   offerRows = offerList.map(offer => 
     `<tr>
       <td>${offer.querySelector("input[type=text]").value}</td>
       <td>\$${offer.querySelector("input[type=number]").value}</td>
     </tr>`);
+    
+   offerList.map((offer,x) => {
+   let d={}
+   d[offer.querySelector("input[type=text]").value]=`$${offer.querySelector("input[type=number]").value}`
+    offerRowsTosave.push(d)});
+   localStorage.setItem('offerRowsToSave',JSON.stringify(offerRowsTosave));
+    console.log(JSON.stringify(offerRowsTosave));
   totalPrice = 
   offerRows.push(    
     `<tr>
@@ -239,12 +297,19 @@ function fillOffers(){
 }
 
 function fillBonuses(){
+  bonusTosave=[]
   bonusList = [...document.querySelectorAll(".bonuses .bonus")];
   bonusRows = bonusList.map(bonus => 
   `<tr>
     <td>When You Buy You Also Get ${bonus.querySelector("input[type=text]").value}</td>
     <td>\$${bonus.querySelector("input[type=number]").value}</td>
   </tr>`)
+  bonusList.map((bonus,x) => {
+    let d={}
+    d[`When You Buy You Also Get ${bonus.querySelector("input[type=text]").value}`]=`$${bonus.querySelector("input[type=number]").value}`
+    bonusTosave.push(d)});
+    localStorage.setItem('bonusTosave',JSON.stringify(bonusTosave));
+     console.log(JSON.stringify(bonusTosave));
   bonusRows.push(
     `<tr>
       <td colspan="1"></td>

@@ -91,21 +91,22 @@
                         </li>
                       </ul>
                 </div>
-                <form class="right">
+                <form class="right" method="post">
+                    @csrf
                     <div class="questions questions-1 active">
                         <div id="product"></div>
                             <ul>
                                 <li class="question">
                                     <label class="label">Product name</label>
-                                    <input type="text" class="input"  placeholder="Type script name" id="tagline">
+                                    <input type="text" class="input"  placeholder="Type script name" id="tagline" name="product_name">
                                 </li>
                                 <li class="question">
                                     <label class="label">Detailed Description</label>
-                                    <textarea name="" id="description"  class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
+                                    <textarea name="product_desc" id="description"  class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
                                 </li>
                                 <li class="question"> 
                                     <label class="label">One line benefit</label>
-                                    <input type="text" placeholder="Type script name"  class="input" id="one-benefit">
+                                    <input type="text" placeholder="Type script name"  class="input" id="one-benefit" name="product_benefit">
                                 </li>
                             </ul>
                             <span class="required hide">Complete step before proceeding</span>
@@ -174,11 +175,11 @@
                                     <div class="offer__body">
                                         <div class="offer__title">
                                             <label >Add title</label>
-                                            <input type="text" placeholder="Type script name"  class="input" >
+                                            <input type="text" placeholder="Type script name" name="offers[]"  class="input" >
                                         </div>
                                         <div class="offer__price">
                                             <label >Price</label>
-                                            <input type="number" placeholder="0.00">
+                                            <input type="number" name="offers_price[]" placeholder="0.00">
                                         </div> 
                                     </div>
                                     <button class="offer__remove" type="button" >Remove</button>
@@ -198,11 +199,11 @@
                                 <div class="offer__body">
                                     <div class="offer__title">
                                         <label >Add title</label>
-                                        <input type="text" placeholder="Type script name"  class="input">
+                                        <input type="text" placeholder="Type script name" name="product_bonus[]" class="input">
                                     </div>
                                     <div class="offer__price">
                                         <label >Price</label>
-                                        <input type="number" placeholder="0.00">
+                                        <input type="number" placeholder="0.00" name="product_bonus_price[]">
                                     </div> 
                                 </div>
                                 <button class="bonus__remove" type="button" >Remove</button>
@@ -225,9 +226,10 @@
                 </form>
             </div>
             <div class="base-container hide">
+                <div id="info"></div>
                 <div class="offer-5-btn">
-                    <button class="offer-5-btn-1">Export script</button>
-                    <button class="offer-5-btn-2">Save</button>
+                    <button class="offer-5-btn-1" onClick="exportScript()">Export script</button>
+                    <button class="offer-5-btn-2" onClick="exportSave()">Save</button>
                 </div>
                 <div class="base-header">
                     <h3 id="table-tagline">Product Tagline Goes here</h3>
@@ -307,6 +309,7 @@
         </div>
     </main>
     @push('script')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="{{asset('js/offer-generator.js')}}"></script>
 @endpush
