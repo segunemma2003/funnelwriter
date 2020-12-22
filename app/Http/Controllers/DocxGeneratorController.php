@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DocxGenerator extends Controller
+class DocxGeneratorController extends Controller
 {
     public function generate_offer(Request $request)
     {

@@ -193,7 +193,7 @@ Route::get('/settings', function () {
 Route::get('/offer-generator', function () {
     return view('frontend.pages.offer-generator');
 })->name('offer-generator');
-Route::post('/offer-generator', [App\Http\Controllers\DocxGenerator::class, 'generate_offer'])->name('generate_offer');
+Route::post('/offer-generator', [App\Http\Controllers\DocxGeneratorController::class, 'generate_offer'])->name('generate_offer');
 });
 Auth::routes();
 
