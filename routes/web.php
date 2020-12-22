@@ -34,15 +34,15 @@ Route::get('/email-copy/emailfacebook', function () {
 })->name('emailfacebook');
 
 Route::get('/email-copy/emailforms', function () {
-    return view('frontend.pages.emails.emailforms');
+    return view('frontend.pages.emails.emailForms');
 })->name('emailforms');
 
 Route::get('/email-copy/emailgiveaway', function () {
     return view('frontend.pages.emails.emailgiveaway');
 })->name('emailgiveaway');
 Route::get('/email-copy/emailadgen', function () {
-    return view('frontend.pages.emails.emailadgen');
-})->name('emailadgen');
+    return view('frontend.pages.emails.emailleadgen');
+})->name('emailleadgen');
 
 Route::group(['prefix'=>'headline'],function(){
     Route::get('/', function () {
