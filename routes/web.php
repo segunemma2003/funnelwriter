@@ -34,15 +34,15 @@ Route::get('/email-copy/emailfacebook', function () {
 })->name('emailfacebook');
 
 Route::get('/email-copy/emailforms', function () {
-    return view('frontend.pages.emails.emailforms');
+    return view('frontend.pages.emails.emailForms');
 })->name('emailforms');
 
 Route::get('/email-copy/emailgiveaway', function () {
     return view('frontend.pages.emails.emailgiveaway');
 })->name('emailgiveaway');
 Route::get('/email-copy/emailadgen', function () {
-    return view('frontend.pages.emails.emailadgen');
-})->name('emailadgen');
+    return view('frontend.pages.emails.emailleadgen');
+})->name('emailleadgen');
 
 Route::group(['prefix'=>'headline'],function(){
     Route::get('/', function () {
@@ -160,7 +160,7 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/workhouse', function () {
         return view('frontend.pages.salesLetter.WorkHouse.workhouse');
     })->name('workhouse');
-    
+
 
 });
 
@@ -174,7 +174,7 @@ Route::group(['prefix'=>'trainings'],function(){
 
 });
 Route::get('/video-sales', function () {
-    return view('frontend.pages.video-sales-letterr');
+    return view('frontend.pages.video-sales-letter');
 })->name('video-sales');
 Route::get('/webinar-script', function () {
     return view('frontend.pages.webinar-script');
@@ -184,7 +184,7 @@ Route::get('/webinar-writer', function () {
 })->name('webinar-writer');
 
 Route::get('/funnel', function () {
-    return view('frontend.pages.funnel-launch');
+    return view('frontend.pages.funnel-launch-planner');
 })->name('funnel-launch');
 Route::get('/settings', function () {
     return view('frontend.pages.settings');

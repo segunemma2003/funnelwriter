@@ -14,7 +14,7 @@
                             </div>
                             <div class="projects__image">
                                 <img class="first" src="images/blue_bg.svg" alt="blue-bg">
-                                <img src="images/folder 1.svg" alt="folder">
+                                <img src="images/folder_1.svg" alt="folder">
                             </div>
                         </div>
                         <div class="scripts__stats">
