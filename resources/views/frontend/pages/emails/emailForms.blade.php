@@ -171,6 +171,39 @@
             </form>
           </div>
         </main>
+    </section>
+
+    <div id="modal-1" aria-hidden="true" class="modal">
+        <div tabindex="-1" data-micromodal-close class>
+          <div role="dialog" aria-modal="true" aria-labelledby="export-script" class="modal-body">
+            <header>
+              <h2 id="export-script">
+                Editor
+              </h2>
+              <button aria-label="Close modal" data-micromodal-close class="close-btn">
+                <svg data-micromodal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path data-micromodal-close d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
+                  <path data-micromodal-close d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
+                </svg>                
+              </button>
+            </header>
+            <div id="modal-1-content">
+              <div id="summernote">
+            
+              </div>
+              <div class="modal-btns">
+                <button class="btn-blue">
+                  Save
+                </button>
+                <button class="btn-light-blue" data-micromodal-close>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
         @push('script')
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    
