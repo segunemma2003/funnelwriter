@@ -1,11 +1,15 @@
 a {
     color: #000000;
   }
-  
+
   .main__content {
     margin: 2.5rem;
   }
-  
+
+  .hide{
+    display: none;
+  }
+
   .btn-light-blue, .btn-blue {
     border-radius: 8px;
     padding: 8px 10px;
@@ -17,17 +21,17 @@ a {
     line-height: 24px;
     cursor: pointer;
   }
-  
+
   .btn-blue {
     color: #ffffff;
     background: #443df6;
   }
-  
+
   .btn-light-blue {
     color: #4834d4;
     background: rgba(68, 61, 246, 0.2);
   }
-  
+
   .cards {
     border: 1px solid #efefef;
     margin: -2rem;
@@ -67,7 +71,7 @@ a {
     font-weight: 600;
     margin: 0.7rem 0;
   }
-  
+
   .form {
     display: grid;
     grid-template-columns: 3.5fr 6.5fr;
@@ -91,7 +95,7 @@ a {
   .form .questions.active {
     display: block;
   }
-  
+
   .titles {
     background: #FBFBFB;
     border-radius: 4px;
@@ -123,7 +127,7 @@ a {
   .titles li.filled path {
     stroke: #35EC81;
   }
-  
+
   form {
     padding: 2.5rem 0.5rem 2.5rem 2rem;
   }
@@ -137,7 +141,7 @@ a {
     font-size: 16px;
     font-weight: 500;
     margin: 20px 0px;
-  
+
   }
   .questions .example {
     color: #C4C4C4;
@@ -150,12 +154,12 @@ a {
     margin: 1rem 0;
     padding: 10px;
   }
-  
+
   .top-btns {
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .modal {
     display: none;
     position: fixed;
@@ -199,7 +203,7 @@ a {
   .modal-btns{
     margin-top: 2rem;
   }
-  
+
   .export-options {
     display: flex;
     border-top: 1px solid #c4c4c4;
@@ -261,4 +265,9 @@ a {
 }
 .note-editor.note-frame {
   border: none;
+}
+
+
+.text-bold{
+  font-weight: 600;
 }

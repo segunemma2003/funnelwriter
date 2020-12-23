@@ -1,4 +1,5 @@
 @extends('frontend.layouts.master')
+@section('title', 'Webinar-Writer')
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">

@@ -1,4 +1,19 @@
 @extends('frontend.layouts.master')
+@section('title','Dashboard')
+@section('dashboard')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2>Welcome, Jethro</h2>
+        <p>Header description goes here</p>
+    </div>
+    <div class="create__new__project">
+        <button>
+            <i class="fas fa-plus"></i>
+            Create a new project
+        </button>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 @endpush
