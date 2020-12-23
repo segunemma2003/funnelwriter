@@ -261,13 +261,11 @@
             </form>
           </div>
         </main>
-    </section>
-
     @push('script')<!-- Scripts -->
   <script src="../../public/header&sidenav.js"></script>
   <script src="../letters.js"></script>
   <script>
-    document.querySelector(".getSummary").addEventListener("click", storeInputs);
+     document.querySelector(".getSummary").addEventListener("click", storeInputs);
     const addInputs = document.querySelectorAll(".form .add");
     addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
 

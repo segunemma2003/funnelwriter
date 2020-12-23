@@ -3,8 +3,7 @@
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
 @endpush
-        <!-- Main Content -->
-        <main class="main__content">
+<main class="main__content">
           <div class="form">
             <ul class="titles">
               <li>
@@ -280,7 +279,7 @@
     <script src="../../public/header&sidenav.js"></script>
     <script src="../letters.js"></script>
     <script>
-        document.querySelector(".getSummary").addEventListener("click", storeInputs);
+       document.querySelector(".getSummary").addEventListener("click", storeInputs);
         const addInputs = document.querySelectorAll(".form .add");
         addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
     

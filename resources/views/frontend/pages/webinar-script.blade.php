@@ -3,9 +3,7 @@
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
 @endpush
-
-        <!-- Main Content -->
-        <main class="main__content">
+<main class="main__content">
             <div class="webinar__script1">
                 <!-- Content Goes in here -->
                 <div class="form__checker">

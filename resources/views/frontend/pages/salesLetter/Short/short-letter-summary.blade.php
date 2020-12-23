@@ -3,8 +3,7 @@
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
 @endpush
-        <!-- Main Content -->
-        <main class="main__content">
+<main class="main__content">
           <div class="top-btns">
             <button class="btn-blue" data-micromodal-trigger="modal-1">Export script</button>
             <button class="btn-light-blue">Save</button>
@@ -175,29 +174,28 @@
         </div>
       </div>
     </div>
-</main>
     @push('script')      
     <!-- Scripts -->
     <script src="../../public/header&sidenav.js"></script>
     <script>
-        MicroModal.init();
+         MicroModal.init();
 
-        function populateInputs(){
-            const inputs = JSON.parse(
-                window.sessionStorage.getItem(document.querySelector(".summary").id)
-            );
-            for (input in inputs){
-            [...document.querySelectorAll(`.${input}`)].forEach(placeholder => {
-                if( Array.isArray(inputs[input]) ){
-                debugger;
-                inputs[input] = "*&nbsp;" + inputs[input].join("<br>*&nbsp;");
-                }
-                placeholder.innerHTML = inputs[input];
-            })
-            }
+function populateInputs(){
+    const inputs = JSON.parse(
+        window.sessionStorage.getItem(document.querySelector(".summary").id)
+    );
+    for (input in inputs){
+    [...document.querySelectorAll(`.${input}`)].forEach(placeholder => {
+        if( Array.isArray(inputs[input]) ){
+        debugger;
+        inputs[input] = "*&nbsp;" + inputs[input].join("<br>*&nbsp;");
         }
+        placeholder.innerHTML = inputs[input];
+    })
+    }
+}
 
-        window.onload = populateInputs;
+window.onload = populateInputs;
     </script>
   
 <script src="{{mix('js/app.js')}}"></script>

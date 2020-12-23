@@ -31,19 +31,19 @@
                             <th>
                                 <div class="flex">
                                     <p>Scripts</p>
-                                    <img src="{{asset('images/arrow-colored.svg')}}" alt="arrow-up-down">
+                                    <img src="images/arrow-colored.svg" alt="arrow-up-down">
                                 </div>
                             </th>
                             <th>
                                 <div class="flex">
                                     <p>Size</p>
-                                    <img src="{{asset('images/arrow-plain.svg')}}" alt="arrow-plain">
+                                    <img src="images/arrow-plain.svg" alt="arrow-plain">
                                 </div>
                             </th>
                             <th>
                                 <div class="flex">
                                     <p>Date</p>
-                                    <img src="{{asset('images/arrow-plain.svg')}}" alt="arrow-plain">
+                                    <img src="images/arrow-plain.svg" alt="arrow-plain">
                                 </div>
                             </th>
                             <th></th>
@@ -73,7 +73,7 @@
                             <td>0.2mb</td>
                             <td>21 Mar 19:30 EEST</td>
                             <td>
-                                <img class='options-img' src="{{asset('images/options.svg')}}" alt="options-menu">
+                                <img class='options-img' src="images/options.svg" alt="options-menu">
                                 <div class="none options">
                                     <ul>
                                         <li class="dark">Download as PDF</li>
@@ -108,7 +108,7 @@
                             <td>0.2mb</td>
                             <td>21 Mar 19:30 EEST</td>
                             <td>
-                                <img class='options-img' src="{{asset('images/options.svg')}}" alt="options-menu">
+                                <img class='options-img' src="images/options.svg" alt="options-menu">
                                 <div class="none options">
                                     <ul>
                                         <li class="dark">Download as PDF</li>
@@ -143,7 +143,7 @@
                             <td>0.2mb</td>
                             <td>21 Mar 19:30 EEST</td>
                             <td>
-                                <img class='options-img' src="{{asset('images/options.svg')}}" alt="options-menu">
+                                <img class='options-img' src="images/options.svg" alt="options-menu">
                                 <div class="none options">
                                     <ul>
                                         <li class="dark">Download as PDF</li>
@@ -178,7 +178,7 @@
                             <td>0.2mb</td>
                             <td>21 Mar 19:30 EEST</td>
                             <td>
-                                <img class='options-img' src="{{asset('images/options.svg')}}" alt="options-menu">
+                                <img class='options-img' src="images/options.svg" alt="options-menu">
                                 <div class="none options">
                                     <ul>
                                         <li class="dark">Download as PDF</li>

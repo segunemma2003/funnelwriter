@@ -3,8 +3,7 @@
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
 @endpush
-        <!-- Main Content -->
-        <main class="main__content">
+<main class="main__content">
           <div class="top-btns">
             <button class="btn-blue" data-micromodal-trigger="modal-1">Export script</button>
             <button class="btn-light-blue">Save</button>
@@ -111,9 +110,7 @@
     <!-- Scripts -->
     <script src="../../public/header&sidenav.js"></script>
     <script>
-        //MicroModal.init();
-
-        function populateInputs(){
+         function populateInputs(){
             const inputs = JSON.parse(
                 window.sessionStorage.getItem(document.querySelector(".summary").id)
             );

@@ -4,8 +4,7 @@
 <link rel="stylesheet" href="{{asset('training.css')}}">
 @endpush
 
-        <!-- Main Content -->
-        <main class="main__content">
+<main class="main__content">
             <div class="training">
                 <!-- Content Goes in here -->
                 <div class="training__header">
@@ -16,21 +15,21 @@
 
                 <div class="selected__tutorial__section">
                     <div class="selected__tutorial__img__top">
-                        <img src="{{asset('images/tutorial-banner.jpg')}}" alt="tutorial-poster">
-                        <img class='play' src="{{asset('images/play.svg')}}" alt="play">
+                        <img src="images/tutorial-banner.jpg" alt="tutorial-poster">
+                        <img class='play' src="images/play.svg" alt="play">
                     </div>
 
                     <div class="selected__tut__ctas">
                         <div class="img">
-                            <img src="{{asset('images/like-blue.svg')}}" alt="like">
+                            <img src="images/like-blue.svg" alt="like">
                             <p>Favorite</p>
                         </div>
                         <div class="img">
-                            <img src="{{asset('images/share-blue.svg')}}" alt="share">
+                            <img src="images/share-blue.svg" alt="share">
                             <p>Share</p>
                         </div>
                         <div class="img">
-                            <img src="{{asset('images/download-blue.svg')}}" alt="download">
+                            <img src="images/download-blue.svg" alt="download">
                             <p>download</p>
                         </div>
                     </div>
@@ -61,8 +60,8 @@
     
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
-                                <img src="{{asset('images/tutorial1.jpg')}}" alt="tutorial-poster">
-                                <img class='play' src="{{asset('images/play.svg')}}" alt="play">
+                                <img src="images/tutorial1.jpg" alt="tutorial-poster">
+                                <img class='play' src="images/play.svg" alt="play">
                             </div>
                             <div class="tutorial__card__content">
                                 <a href='#' class="content__title">Introduction to funnelwriting</a>
@@ -70,13 +69,13 @@
                                 <div class="ctas">
                                     <div class="options">
                                         <div class="img">
-                                            <img src="{{asset('images/like.svg')}}" alt="like">
+                                            <img src="images/like.svg" alt="like">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/download.svg')}}" alt="download">
+                                            <img src="images/download.svg" alt="download">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/share.svg')}}" alt="share">
+                                            <img src="images/share.svg" alt="share">
                                         </div>
                                     </div>
                                     <p class="video__length">
@@ -88,8 +87,8 @@
     
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
-                                <img src="{{aset('images/tutorial2.jpg')}}" alt="tutorial-poster">
-                                <img class='play' src="{{asset('images/play.svg')}}" alt="play">
+                                <img src="images/tutorial2.jpg" alt="tutorial-poster">
+                                <img class='play' src="images/play.svg" alt="play">
                             </div>
                             <div class="tutorial__card__content">
                                 <a href='#' class="content__title">Introduction to funnelwriting</a>
@@ -97,13 +96,13 @@
                                 <div class="ctas">
                                     <div class="options">
                                         <div class="img">
-                                            <img src="{{asset('images/like.svg')}}" alt="like">
+                                            <img src="images/like.svg" alt="like">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/download.svg')}}" alt="download">
+                                            <img src="images/download.svg" alt="download">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/share.svg')}}" alt="share">
+                                            <img src="images/share.svg" alt="share">
                                         </div>
                                     </div>
                                     <p class="video__length">
@@ -115,8 +114,8 @@
     
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
-                                <img src="{{asset('images/tutorial3.jpg')}}" alt="tutorial-poster">
-                                <img class='play' src="{{asset('images/play.svg')}}" alt="play">
+                                <img src="images/tutorial3.jpg" alt="tutorial-poster">
+                                <img class='play' src="images/play.svg" alt="play">
                             </div>
                             <div class="tutorial__card__content">
                                 <a href='#' class="content__title">Introduction to funnelwriting</a>
@@ -124,13 +123,13 @@
                                 <div class="ctas">
                                     <div class="options">
                                         <div class="img">
-                                            <img src="{{asset('images/like.svg')}}" alt="like">
+                                            <img src="images/like.svg" alt="like">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/download.svg')}}" alt="download">
+                                            <img src="images/download.svg" alt="download">
                                         </div>
                                         <div class="img">
-                                            <img src="{{asset('images/share.svg')}}" alt="share">
+                                            <img src="images/share.svg" alt="share">
                                         </div>
                                     </div>
                                     <p class="video__length">
