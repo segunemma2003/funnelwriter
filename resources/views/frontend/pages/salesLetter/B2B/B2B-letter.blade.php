@@ -293,7 +293,7 @@
                   </li>
                 </ul>
                 <div class="btns">
-                  <a href="B2B-summary.html" class="btn-blue go-summary">Next</a>
+                  <a href="{{route('b2b-summary')}}" class="btn-blue go-summary">Next</a>
                   <a href="#process2" class="btn-light-blue form-nav">Previous</a>
                 </div>
               </div>
@@ -304,8 +304,8 @@
 
     <!-- Scripts -->
 
-    <script src="../../public/header&sidenav.js"></script>
-    <script src="../letters.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="{{asset('js/letters.js')}}"></script>
     <script>
       
       const addInputs = document.querySelectorAll(".form .add");
@@ -344,8 +344,5 @@
       }
 
     </script>
-  
-    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-<script src="{{asset('js/offer-generator.js')}}"></script>
 @endpush
 @endsection

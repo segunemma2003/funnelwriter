@@ -97,6 +97,8 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/', function () {
         return view('frontend.pages.sales-letter');
     })->name('sales');
+    Route::post('/sales/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'salesPDF'])->name('salesPDF');
+     
     Route::get('/b2b/letter', function () {
         return view('frontend.pages.salesLetter.B2B.B2B-letter');
     })->name('b2b-letter');
