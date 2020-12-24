@@ -20,7 +20,7 @@ class OfferGenController extends Controller
 
         //share data to view
         view()->share('offer-generator', $data);
-        $pdf = PDF::loadView('frontend.pages.offer-generator', $data);
+        $pdf = PDF::loadView('frontend.pages.offer-generator', compact('data'));
 
         //download pdf file
         return $pdf->download('offer.pdf');
