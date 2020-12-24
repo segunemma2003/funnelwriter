@@ -27,14 +27,15 @@ $pw->setDefaultFontSize(10);
 
         $section = $pw->addSection();
        
-        $section->addTitle(
-            $info['item']
+        $section->addText(
+            $info['item'],
+            array('name' => 'Tahoma', 'size' => 25, 'color' => '1B2232', 'bold' => true)
         );
-        $section->addTitle("Description");
+        $section->addText("Description",  array('name' => 'Tahoma', 'size' => 16, 'color' => '1B2232', 'bold' => true));
         $section->addText(
             $info['desc']
         );
-        $section->addTitle( "Benefit");
+        $section->addText( "Benefit",  array('name' => 'Tahoma', 'size' => 16, 'color' => '1B2232', 'bold' => true));
         $section->addText(
            
             $info['benefit']
