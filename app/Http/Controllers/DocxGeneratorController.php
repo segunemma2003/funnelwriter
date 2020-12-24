@@ -157,7 +157,7 @@ class DocxGeneratorController extends Controller
         Legal Disclaimers, Etc. Go Here
         <<End Copy>>");
 
-        $nameTosave="offres_".trim(auth()->user()->name)."_".time().".docx";
+        $nameTosave="offres_".time().".docx";
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'Word2007');
         $objWriter->save($nameTosave);
         
@@ -314,7 +314,7 @@ class DocxGeneratorController extends Controller
         Legal Disclaimers, Etc. Go Here
         <<End Copy>>");
 
-        $nameTosave="offres_".trim(auth()->user()->name)."_".time().".pdf";
+        $nameTosave="offres_"."_".time().".pdf";
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'PDF');
         $objWriter->save($nameTosave);
         
