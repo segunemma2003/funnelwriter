@@ -1,4 +1,14 @@
 @extends('frontend.layouts.master')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2 class="headline-header">Kickass Headline Generator</h2>
+        <p>write attention grabbing headlines</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Headline</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('css/headline.css')}}">
@@ -18,7 +28,7 @@
                     <li>
                         <a onclick="goToHeadline(3)" class="link" href="#">Fun/Playful</a>
                     </li>
-                    
+
                     <li>
                         <a onclick="goToHeadline(4)" class="link" href="#">How To</a>
                     </li>
@@ -303,7 +313,7 @@
 
                     <div class="right-content">
                         <fieldset class="writer">
-                            <legend> 
+                            <legend>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="16" cy="16" r="15.5" stroke="#F5F6F9"/>
                                 <path d="M13.608 11.76V10.432H16.616V22H15.144V11.76H13.608Z" fill="#1B2124"/>
@@ -1686,7 +1696,7 @@
                         </fieldset>
 
                         <fieldset class="writer">
-                            <legend> 
+                            <legend>
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="16" cy="16" r="15.5" stroke="#F5F6F9"/>
                                     <path d="M19.368 11.696H13.752V15.344C13.9973 15.0027 14.36 14.7253 14.84 14.512C15.32 14.288 15.8373 14.176 16.392 14.176C17.2773 14.176 17.9973 14.3627 18.552 14.736C19.1067 15.0987 19.5013 15.5733 19.736 16.16C19.9813 16.736 20.104 17.3493 20.104 18C20.104 18.768 19.96 19.456 19.672 20.064C19.384 20.672 18.9413 21.152 18.344 21.504C17.7573 21.856 17.0267 22.032 16.152 22.032C15.032 22.032 14.1253 21.744 13.432 21.168C12.7387 20.592 12.3173 19.824 12.168 18.864H13.592C13.7307 19.472 14.024 19.9467 14.472 20.288C14.92 20.6293 15.4853 20.8 16.168 20.8C17.0107 20.8 17.6453 20.5493 18.072 20.048C18.4987 19.536 18.712 18.864 18.712 18.032C18.712 17.2 18.4987 16.56 18.072 16.112C17.6453 15.6533 17.016 15.424 16.184 15.424C15.6187 15.424 15.1227 15.5627 14.696 15.84C14.28 16.1067 13.976 16.4747 13.784 16.944H12.408V10.416H19.368V11.696Z" fill="#1B2124"/>

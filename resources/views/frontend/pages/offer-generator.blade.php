@@ -1,4 +1,15 @@
 @extends('frontend.layouts.master')
+@section('desc')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2>Generate your sales offer</h2>
+        <p>Create your offers</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Headline</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('css/offer-generator.css')}}">
@@ -6,7 +17,7 @@
         <!-- Main Content -->
 
          <!-- Base Widget section -->
-    
+
          <main class="main__content">
         <!-- widget -->
         <div>
@@ -20,7 +31,7 @@
                         <img src="images/Group 1459.png" alt="">
                     </div>
                 </div>
-        
+
                 <div class="frame-2 m-size">
                     <div class="frame-alpha-num">
                         <p class="text">Total offer price</p>
@@ -29,24 +40,24 @@
                     <div class="frame-icon">
                             <img src="images/Group.png" alt="">
                     </div>
-        
+
                 </div>
                 <div class="frame-3">
                     <svg class="circle">
-                        
+
 
                         <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
                             <stop offset="0%" stop-color="rgba(227, 35, 255, 1)"></stop>
                             <stop offset="100%" stop-color="rgba(117, 23, 248, 1)"></stop>
-                         </linearGradient>                     
+                         </linearGradient>
                         <text x="20" y="35" class="percent">10%</text>
                         <circle class="circle__outter" r="24" cx="50%" cy="50%" stroke="black" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="660, 660">
-                            
+
                         </circle>
                         <circle class="circle__inner" r="25" cx="50%" cy="50%" stroke="url(#linearColors)" fill="none" stroke-width="6" stroke-linecap="round" stroke-dasharray="0, 660">
-                        
+
                         </circle>
-                        
+
                     </svg>
                     <div class="strength">
                         <p>Offer strength</p>
@@ -63,20 +74,20 @@
                               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>                  
+                              </svg>
                                   Product Tagline
                           </div>
-                              <span class="status"></span>  
+                              <span class="status"></span>
                         </li>
                         <li>
                           <div>
                           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                               <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>                                   
+                          </svg>
                             Product Offers
                           </div>
-                          <span class="status"></span> 
+                          <span class="status"></span>
                         </li>
 
                         <li>
@@ -84,10 +95,10 @@
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                   
-                                Add Bonuses    
+                            </svg>
+                                Add Bonuses
                             </div>
-                            <span class="status"></span> 
+                            <span class="status"></span>
                         </li>
                       </ul>
                 </div>
@@ -97,15 +108,15 @@
                             <ul>
                                 <li class="question">
                                     <label class="label">Product name</label>
-                                    <input type="text" class="input"  placeholder="Type script name" id="tagline">
+                                    <input type="text" name="product_name" class="input"  placeholder="Type script name" id="tagline">
                                 </li>
                                 <li class="question">
                                     <label class="label">Detailed Description</label>
-                                    <textarea name="" id="description"  class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
+                                    <textarea name="" id="description" name="desc" class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
                                 </li>
-                                <li class="question"> 
+                                <li class="question">
                                     <label class="label">One line benefit</label>
-                                    <input type="text" placeholder="Type script name"  class="input" id="one-benefit">
+                                    <input type="text" placeholder="Type script name" name="benefit" class="input" id="one-benefit">
                                 </li>
                             </ul>
                             <span class="required hide">Complete step before proceeding</span>
@@ -113,7 +124,7 @@
                                 <button class="next-btn btn-nav" id="questions-2" type="button">Next</button>
                             </div>
                     </div>
-                    
+
                     <div class="questions questions-2">
                         <div style="position: relative;">
                             <div class="dropdown">
@@ -123,7 +134,7 @@
                                         <span style="color:#777777" class="choose">Choose</span>
                                         <svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12.2929 0.292892C12.6834 -0.0976315 13.3166 -0.0976315 13.7071 0.292892C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.32853 8.08568 6.71894 8.09893 6.32428 7.73715L0.324276 2.23715C-0.0828428 1.86396 -0.110347 1.23139 0.262846 0.824274C0.636039 0.417155 1.26861 0.389653 1.67572 0.762845L6.96992 5.61586L12.2929 0.292892Z" fill="black"/>
-                                        </svg>                                
+                                        </svg>
                                     </div>
                                 </fieldset>
                             </div>
@@ -164,9 +175,9 @@
                                 <button class="btn" id="SideDeck" type="button">Side Deck</button>
                                 <button class="btn" id="Playbook" type="button">Playbook</button>
                                 <button class="btn" id="Membership" type="button">Membership</button>
-                                <button class="btn" id="Retreat" type="button">Retreat</button> 
+                                <button class="btn" id="Retreat" type="button">Retreat</button>
                                 <button class="btn" id="Bootcamp" type="button">Bootcamp</button>
-                            </div> 
+                            </div>
                             <br>
                             <div class="offers">
                                 <div class="offer" id="offerTemplate" data-offer="Ebook">
@@ -174,12 +185,12 @@
                                     <div class="offer__body">
                                         <div class="offer__title">
                                             <label >Add title</label>
-                                            <input type="text" placeholder="Type script name"  class="input" >
+                                            <input type="text" placeholder="Type script name" name="offer_title" class="input" >
                                         </div>
                                         <div class="offer__price">
                                             <label >Price</label>
-                                            <input type="number" placeholder="0.00">
-                                        </div> 
+                                            <input type="number" name="offer_price" placeholder="0.00">
+                                        </div>
                                     </div>
                                     <button class="offer__remove" type="button" >Remove</button>
                                 </div>
@@ -198,12 +209,12 @@
                                 <div class="offer__body">
                                     <div class="offer__title">
                                         <label >Add title</label>
-                                        <input type="text" placeholder="Type script name"  class="input">
+                                        <input type="text" placeholder="Type script name" name="bonus_title" class="input">
                                     </div>
                                     <div class="offer__price">
                                         <label >Price</label>
-                                        <input type="number" placeholder="0.00">
-                                    </div> 
+                                        <input type="number" name="bonus_price" placeholder="0.00">
+                                    </div>
                                 </div>
                                 <button class="bonus__remove" type="button" >Remove</button>
                             </div>
@@ -230,19 +241,19 @@
                     <button class="offer-5-btn-2">Save</button>
                 </div>
                 <div class="base-header">
-                    <h3 id="table-tagline">Product Tagline Goes here</h3>
+                    <h3 id="table-tagline">$data->product_name</h3>
                 </div>
                 <div class="problem-set">
                     <div class="prob-1">
                         <div class="prob-1-text">
                             <p class="prob-1-text-prob">Description</p>
-                            <p class="prob-1-text-note" id="table-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="prob-1-text-note" id="table-description">$data->desc</p>
                         </div>
                     </div>
                     <div class="prob-1">
                         <div class="prob-1-text">
                             <p class="prob-1-text-prob">Benefit</p>
-                            <p class="prob-1-text-note" id="table-benefit">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="prob-1-text-note" id="table-benefit">$data->benefit</p>
                         </div>
                     </div>
                 </div>
@@ -255,6 +266,10 @@
                                 <th>Offer</th>
                                 <th>Price</th>
                             </tr>
+                            <tr>
+                                <th>$data->offer_title</th>
+                                <th>$data->offer_price</th>
+                            </tr>
                         </table>
                     </div>
 
@@ -265,6 +280,10 @@
                         <tr>
                             <th>Bonuses</th>
                             <th>Price</th>
+                        </tr>
+                        <tr>
+                            <th>$data->bonus_title</th>
+                            <th>$data->bonus_price</th>
                         </tr>
                     </table>
                 </div>
@@ -285,7 +304,7 @@
                         <div class="offer__price">
                             <label >Price</label>
                             <input type="number" placeholder="0.00">
-                        </div> 
+                        </div>
                     </div>
                     <button class="offer__remove" type="button" >Remove</button>
                 </div>
@@ -294,12 +313,12 @@
                     <div class="offer__body">
                         <div class="offer__title">
                             <label >Add title</label>
-                            <input type="text" placeholder="Type script name"  class="input">
+                            <input type="text" placeholder="Type script name" name="bonus_title" class="input">
                         </div>
                         <div class="offer__price">
                             <label >Price</label>
-                            <input type="number" placeholder="0.00">
-                        </div> 
+                            <input type="number" name="bonus_price" placeholder="0.00">
+                        </div>
                     </div>
                     <button class="bonus__remove" type="button" >Remove</button>
                 </div>

@@ -1,4 +1,15 @@
 @extends('frontend.layouts.master')
+@section('desc')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2>Tutorial videos</h2>
+        <p>Header description goes here</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Training</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">

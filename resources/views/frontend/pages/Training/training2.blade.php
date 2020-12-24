@@ -1,4 +1,15 @@
 @extends('frontend.layouts.master')
+@section('desc')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2>Tutorial videos</h2>
+        <p>Header description goes here</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Training</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('training.css')}}">
@@ -42,7 +53,7 @@
                         <div class="description">
                             <p>
                                 In this course you would learn to mix traditional media with
-                                digital mastery and apply some custom-made textures to a vector 
+                                digital mastery and apply some custom-made textures to a vector
                                 illustration imported into Adobe Photoshop.
                             </p>
                         </div>
@@ -57,7 +68,7 @@
                     </div>
 
                     <div class="tutorial__container">
-    
+
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
                                 <img src="images/tutorial1.jpg" alt="tutorial-poster">
@@ -84,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
                                 <img src="images/tutorial2.jpg" alt="tutorial-poster">
@@ -111,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="tutorial__card">
                             <div class="tutorial__card__img__top">
                                 <img src="images/tutorial3.jpg" alt="tutorial-poster">

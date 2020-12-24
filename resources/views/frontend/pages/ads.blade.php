@@ -1,4 +1,15 @@
 @extends('frontend.layouts.master')
+@section('desc')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2>Generate your sales offer</h2>
+        <p>Create your offers</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Headline</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
@@ -14,23 +25,23 @@
                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                  
-                          Process 1 
+                      </svg>
+                          Process 1
                   </div>
-                      <span class="status"></span>  
+                      <span class="status"></span>
                 </li>
                 <li>
                   <div>
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                                   
+                  </svg>
                       Process 2
                   </div>
-                  <span class="status"></span> 
+                  <span class="status"></span>
                 </li>
               </ul>
-              
+
               <form class="questions" >
                 <div id="product">
                   <ul>
@@ -97,7 +108,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features and benefits of the product
                     </div>
                   </ul>
@@ -149,7 +160,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                       </div>
                     </li>
@@ -162,7 +173,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                       </div>
                     </li> -->
@@ -172,7 +183,7 @@
                       <div class="example">(Ex: discovered a secret blue print thatmade my journey a lot easier and better)</div>
                       <input type="text" id="q31">
                     </li>
-                    
+
                     <label class="label">What are past customers saying about your product(Testimonials)?</label>
                 <div>
                     <li class="question">
@@ -191,7 +202,7 @@
                         <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                         <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                         <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                            
+                    </svg>
                     Add more testimonials
                 </div>
                       <li class="question">
@@ -254,12 +265,12 @@
                 <svg data-micromodal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path data-micromodal-close d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
                   <path data-micromodal-close d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
-                </svg>                
+                </svg>
               </button>
             </header>
             <div id="modal-1-content">
               <div id="summernote">
-            
+
               </div>
               <div class="modal-btns">
                 <button class="btn-blue">
@@ -287,7 +298,7 @@
             <p>Introducing <span class="q4"></span>.</p>
             <p>A powerful new <span class="q3"></span> that can help you to <span class="q8"></span> without all the headaches.</p>
             <p>Here's just a few things about <span class="q4"></span> that will help you.</p>
-                
+
             <p class="hide">1) <span class="a1"></span>, which is good because <span class="a2"></span>.</p>
             <p class="hide">2) <span class="a3"></span>, which is good because <span class="a4"></span>.</p>
             <p class="hide">3) <span class="a5"></span>, which is good because <span class="a6"></span>.</p>
@@ -308,8 +319,8 @@
             <p class="hide">18) <span class="a33"></span>, which is good because <span class="a34"></span>.</p>
             <p class="hide">19) <span class="a35"></span>, which is good because <span class="a36"></span>.</p>
             <p class="hide">20) <span class="a37"></span>, which is good because <span class="a38"></span>.</p>
-            
-            
+
+
             <p>And there's a whole lot more.</p>
             <br>
             <h3>Headline</h3>
@@ -360,7 +371,7 @@
             <h3>News Feed Link Description (the Caption)</h3>
             <p>Before <span class="q4"></span>, <span class="q38"></span>. Now, I do and so can you.</p>
 
-            
+
         </div>
         <div class="ad3">
             <br>
@@ -548,6 +559,6 @@
           <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
           <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
           <script src="{{asset('js/fbads.js')}}"></script>
-          
+
 @endpush
 @endsection

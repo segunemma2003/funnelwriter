@@ -1,4 +1,15 @@
 @extends('frontend.layouts.master')
+@section('desc')
+<div class="page__header__breadcrumb">
+    <div class="generate">
+        <h2 class="headline-header">Kickass Headline Generator</h2>
+        <p>write attention grabbing headlines</p>
+    </div>
+    <div class="breadcrumb">
+        <span>Home</span> / <span class="active">Headline</span>
+    </div>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link rel="stylesheet" href="{{asset('css/headline.css')}}">
@@ -20,7 +31,7 @@
                     <li>
                         <a class="link" href="{{route('headline4')}}">Fun/Playful</a>
                     </li>
-                    
+
                     <li>
                         <a class="link" href="{{route('headline5')}}">How To</a>
                     </li>
@@ -284,5 +295,5 @@
         </main>
         @push('script')
         <script src="{{asset('js/headline.js') }}"></script>
-@endpush    
+@endpush
 @endsection

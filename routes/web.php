@@ -195,6 +195,7 @@ Route::get('/offer-generator', function () {
 })->name('offer-generator');
 Route::post('/offer-generator', [App\Http\Controllers\DocxGeneratorController::class, 'generate_offer'])->name('generate_offer');
 });
+Route::get('/offer-generator/{id}/pdf', [App\Http\Controllers\OfferGenController::class,'generatePdf'])->name('pdf');
 Auth::routes();
 
 

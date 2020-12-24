@@ -27,17 +27,7 @@
                     </a>
                 </li>
             </ul>
+            @yield('desc')
         </nav>
-        <div class="page__header__breadcrumb">
-            <div class="generate">
-                <h2>Welcome, {{auth()->user()->name}}</h2>
-                <p>Header description goes here</p>
-            </div>
-            <div class="create__new__project">
-                <button>
-                    <i class="fas fa-plus"></i>
-                    Create a new project
-                </button>
-            </div>
-        </div>
+        @yield('dashboard')
     </header>
