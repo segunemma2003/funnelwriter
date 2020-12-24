@@ -539,7 +539,7 @@ window.onload = populateInputs;
 async function DownloadDoc(){
     let data=sessionStorage.getItem('B2B')
 
-    let response= await axios.post("{{route('salesPDF')}}",{data}).then((res)=>{
+    let response= await axios.post("{{route('salesDOC')}}",{data}).then((res)=>{
     console.log(res.data.data)
     window.open("/"+res.data.data)
   }).catch((err)=>{
@@ -551,7 +551,14 @@ async function SendMail(){
 
 }
 async function DownloadPDF(){
+    let data=sessionStorage.getItem('B2B')
 
+    let response= await axios.post("{{route('salesPDF')}}",{data}).then((res)=>{
+    console.log(res.data.data)
+    window.open("/"+res.data.data)
+  }).catch((err)=>{
+    console.log(err)
+  })
 }
     </script>
 <script src="{{mix('js/app.js')}}"></script>
