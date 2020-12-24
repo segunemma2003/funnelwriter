@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 @push('style')
-<link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
+<link rel="stylesheet" href="{{asset('css/training.css')}}">
 @endpush
 <main class="main__content">
             <div class="training">
@@ -33,7 +33,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -60,7 +60,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -87,7 +87,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -114,7 +114,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -141,7 +141,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -168,7 +168,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -195,7 +195,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -222,7 +222,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href='{{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -249,7 +249,7 @@
                             <img class='play' src="images/play.svg" alt="play">
                         </div>
                         <div class="tutorial__card__content">
-                            <a href='training2.html' class="content__title">Introduction to funnelwriting</a>
+                            <a href={{route('training2')}}' class="content__title">Introduction to funnelwriting</a>
                             <p class="content__description">Learn how to create funnels</p>
                             <div class="ctas">
                                 <div class="options">
@@ -283,5 +283,6 @@
         </main>
         @push('script')
 <script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/training.js')}}"></script>
 @endpush
 @endsection

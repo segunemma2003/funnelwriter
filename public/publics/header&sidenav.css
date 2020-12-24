@@ -50,10 +50,10 @@ a{
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
-    margin-bottom: 5px; 
-    margin-top: 2px; 
+    margin-bottom: 5px;
+    margin-top: 2px;
   }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: #e3e3e3;
@@ -63,20 +63,20 @@ a{
 /* Track piece*/
 ::-webkit-scrollbar-track-piece:end {
     background: transparent;
-    margin-bottom: 2px; 
+    margin-bottom: 2px;
 }
 
 ::-webkit-scrollbar-track-piece:start {
     background: transparent;
     margin-top: 2px;
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--light-purple);
     border-radius: 8px;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--light-purple);
@@ -190,7 +190,7 @@ header{
     height: 40px;
     max-width: 488px;
     background: rgba(251, 251, 251, 0.1);
-    border: 1px solid transparent;   
+    border: 1px solid transparent;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -242,6 +242,7 @@ header{
 
 /* Sidebar */
 .sidebar{
+    opacity: 1 !important;
     padding: 1.5rem 0;
     border-radius: 12px;
     width: var(--sidebar-width);
@@ -382,7 +383,7 @@ header{
 
 .sidebar.close .management__links .title{
     display: none;
-}   
+}
 
 .main__section{
     width: 100%;
