@@ -20,12 +20,12 @@ class DocxGeneratorController extends Controller
               'cellMargin'=>50);
 $styleFirstRow = array('bgColor'=>'66BBFF');
 $pw->addTableStyle('myTable', $styleTable, $styleFirstRow);
-
+$header = array('size' => 16, 'bold' => true);
+$pw->addTitleStyle(4, array('name'=>'HelveticaNeueLT Std Med', 'size'=>16, 'color'=>'990000')); //h1
 $pw->setDefaultFontName('Tahoma');
 $pw->setDefaultFontSize(10);
 
         $section = $pw->addSection();
-        $header = array('size' => 16, 'bold' => true);
        
         $section->addTitle(
             $info['item']
