@@ -213,12 +213,44 @@ function fillTable(){
   fillOffers();
   fillBonuses();
   fillProductInfo();
+
+}
+function save(){
+  let data={
+    info:localStorage.getItem('productInfo'),
+    offers:localStorage.getItem('offer'),
+    bonus:localStorage.getItem('bonus')
+
+  }
+}
+async function export_data(){
+  let data={
+    info:localStorage.getItem('productInfo'),
+    offers:localStorage.getItem('offer'),
+    bonus:localStorage.getItem('bonus')
+
+
+  }
+  console.log(data)
+
+  let response= await axios.post('/offer-generator',{data}).then((res)=>{
+    console.log(res.data.data)
+    window.open("/"+res.data.data)
+  }).catch((err)=>{
+    console.log(err)
+  })
 }
 
 function fillProductInfo(){
   select("#table-tagline").textContent = select("#tagline").value;
   select("#table-description").textContent = select("#description").value;
   select("#table-benefit").textContent = select("#one-benefit").value;
+  productInfo={
+    item:select("#tagline").value,
+    desc:select("#description").value,
+    benefit:select("#one-benefit").value
+  }
+  localStorage.setItem('productInfo',JSON.stringify(productInfo))
 }
 
 function fillOffers(){
@@ -228,6 +260,15 @@ function fillOffers(){
       <td>${offer.querySelector("input[type=text]").value}</td>
       <td>\$${offer.querySelector("input[type=number]").value}</td>
     </tr>`);
+
+    offerListTosave=[]
+    offerList.map((offer,n)=>{
+      offerListTosav={}
+      offerListTosav[offer.querySelector("input[type=text]").value]=`$${offer.querySelector("input[type=number]").value}`
+      offerListTosave.push(offerListTosav)
+    })
+    console.log(offerListTosave);
+    localStorage.setItem('offer',JSON.stringify(offerListTosave))
   totalPrice = 
   offerRows.push(    
     `<tr>
@@ -245,6 +286,14 @@ function fillBonuses(){
     <td>When You Buy You Also Get ${bonus.querySelector("input[type=text]").value}</td>
     <td>\$${bonus.querySelector("input[type=number]").value}</td>
   </tr>`)
+  bonusListTosave=[]
+  bonusList.map((bonus,n)=>{
+    myb={}
+    myb[`When You Buy You Also Get ${bonus.querySelector("input[type=text]").value}`]=`$${bonus.querySelector("input[type=number]").value}`
+    bonusListTosave.push(myb)
+  })
+  console.log(bonusListTosave);
+  localStorage.setItem('bonus',JSON.stringify(bonusListTosave))
   bonusRows.push(
     `<tr>
       <td colspan="1"></td>

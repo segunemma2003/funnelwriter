@@ -226,8 +226,8 @@
             </div>
             <div class="base-container hide">
                 <div class="offer-5-btn">
-                    <button class="offer-5-btn-1">Export script</button>
-                    <button class="offer-5-btn-2">Save</button>
+                    <button onClick="export_data()" class="offer-5-btn-1">Export script</button>
+                    <button onClick="save()" class="offer-5-btn-2">Save</button>
                 </div>
                 <div class="base-header">
                     <h3 id="table-tagline">Product Tagline Goes here</h3>
@@ -307,8 +307,9 @@
         </div>
     </main>
     @push('script')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{asset('js/offer-generator.js')}}"></script>
 @endpush
 @endsection
