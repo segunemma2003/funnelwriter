@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Dompdf\Dompdf;
+use PDF;
+use \PhpOffice\PhpWord\Settings;
 class DocxGeneratorController extends Controller
 {
     public function salesDOC(Request $request)
@@ -314,11 +316,20 @@ class DocxGeneratorController extends Controller
         Legal Disclaimers, Etc. Go Here
         <<End Copy>>");
 
-        $nameTosave="offres_"."_".time().".pdf";
-        $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'PDF');
+        $nameTosave="offres_".time().".html";
+        $pdfname="offres_".time().".pdf";
+        $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'HTML');
         $objWriter->save($nameTosave);
-        
-        return response()->json(["data"=>$nameTosave]);
+        // $domPdfPath = realpath(__DIR__ . '/vendor/mpdf/mpdf/');
+        // \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
+        // \PhpOffice\PhpWord\Settings::setPdfRendererName('MPDF');
+        // // $gn=$pw->loadTemplate($nameTosave);
+        // $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($nameTosave));
+        // $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
+        // $PDFWriter->save($pdfname); 
+        chmod($nameTosave,0644);
+        PDF::loadFile(public_path()."/".$nameTosave)->save($pdfname);
+        return response()->json(["data"=>$pdfname]);
     }
     public function generate_offer(Request $request)
     {
