@@ -21,7 +21,7 @@ const toggleSideBar = () => {
                 <p class="cs">Coming Soon</p>
             `;
         }
-        // expand or collapse content margin 
+        // expand or collapse content margin
         main__content.classList.toggle('minify__pd');
         //expand or collapse generate text on navbar
         headerAndBreadcrumb.classList.toggle('minify__pd');

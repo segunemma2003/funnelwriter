@@ -1,12 +1,12 @@
 @extends('frontend.layouts.master')
 @section('content')
 @push('style')
-<link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
+<link rel="stylesheet" href="{{asset('css/video-sales-letter.css')}}">
 @endpush
         <!-- Main Content -->
         <main class="main__content">
             <div class="form">
-              
+
               <form class="questions" id="long">
                 <div id="product">
                   <ul>
@@ -31,7 +31,7 @@
                       <li class="question" id="q4">
                         <label class="label">What&#39;s the most significant thin your market wants to do:</label>
                         <div class="example">
-                          (Ex: " build profit making funnels) 
+                          (Ex: " build profit making funnels)
                           </div>
                         <input type="text">
                       </li>
@@ -54,7 +54,7 @@
                                 <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                                 <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                                 <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                            </svg>                            
+                            </svg>
                             Add more features of the product
                         </div>
                       </li>
@@ -92,7 +92,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -105,7 +105,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -118,7 +118,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -131,7 +131,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -144,7 +144,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -157,7 +157,7 @@
                             <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
                             <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
                             <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
+                        </svg>
                         Add more features of the product
                     </div>
                     </li>
@@ -166,11 +166,12 @@
                     <button type="button" class="btn-blue generate-btn" data-micromodal-trigger="modal-1">Next</button>
                   </div>
                 </div>
-               
+
               </form>
             </div>
           </main>
    @push('script')
 <script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/video-sales-letter.js')}}"></script>
 @endpush
 @endsection

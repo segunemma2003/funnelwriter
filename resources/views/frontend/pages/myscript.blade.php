@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 @push('style')
-<link rel="stylesheet" href="{{asset('css/sales-letter.css')}}">
+<link rel="stylesheet" href="{{asset('css/myscript.css')}}">
 @endpush
 
         <!-- Main Content -->
@@ -26,7 +26,7 @@
                             <img src="images/folder_orange.svg" alt="folder-orange">
                             <p class="items__created orange">12 items created</p>
                         </div>
-                        <a href="AfiliateBoxLaunch.html" class="project__title text-blue">AfiliateBox Launch</a>
+                        <a href="{{route('affiliateboxlaunch')}}" class="project__title text-blue">AfiliateBox Launch</a>
                         <p class="project__description text-light-blue">Preparing to sale the project</p>
                     </div>
 
@@ -43,7 +43,7 @@
                             <img src="images/folder_blue.svg" alt="folder-orange">
                             <p class="items__created blue">4 items created</p>
                         </div>
-                        <a href="AfiliateBoxagency.html" class="project__title text-blue">AfiliateBox agency</a>
+                        <a href="{{route('affiliateboxagency')}}" class="project__title text-blue">AfiliateBox agency</a>
                         <p class="project__description text-light-blue">Writing copy for client</p>
                     </div>
 
@@ -60,7 +60,7 @@
                             <img src="images/folder_blue.svg" alt="folder-orange">
                             <p class="items__created blue">4 items created</p>
                         </div>
-                        <a href="AfiliateBoxagency.html" class="project__title text-blue">AfiliateBox agency</a>
+                        <a href="{{route('affiliateboxagency')}}" class="project__title text-blue">AfiliateBox agency</a>
                         <p class="project__description text-light-blue">Writing copy for client</p>
                     </div>
 
@@ -77,7 +77,7 @@
                             <img src="images/folder_orange.svg" alt="folder-orange">
                             <p class="items__created orange">12 items created</p>
                         </div>
-                        <a href="AfiliateBoxLaunch.html" class="project__title text-blue">AfiliateBox Launch</a>
+                        <a href="{{route('affiliateboxlaunch')}}" class="project__title text-blue">AfiliateBox Launch</a>
                         <p class="project__description text-light-blue">Preparing to sale the project</p>
                     </div>
 
@@ -94,7 +94,7 @@
                             <img src="images/folder_blue.svg" alt="folder-orange">
                             <p class="items__created blue">4 items created</p>
                         </div>
-                        <a href="AfiliateBoxagency.html" class="project__title text-blue">AfiliateBox agency</a>
+                        <a href="{{route('affiliateboxagency')}}" class="project__title text-blue">AfiliateBox agency</a>
                         <p class="project__description text-light-blue">Writing copy for client</p>
                     </div>
 
@@ -111,7 +111,7 @@
                             <img src="images/folder_blue.svg" alt="folder-orange">
                             <p class="items__created blue">4 items created</p>
                         </div>
-                        <a href="AfiliateBoxagency.html" class="project__title text-blue">AfiliateBox agency</a>
+                        <a href="{{route('affiliateboxagency')}}" class="project__title text-blue">AfiliateBox agency</a>
                         <p class="project__description text-light-blue">Writing copy for client</p>
                     </div>
                 </div>
@@ -119,5 +119,6 @@
         </main>
         @push('script')
 <script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/myscript.js')}}"></script>
 @endpush
 @endsection

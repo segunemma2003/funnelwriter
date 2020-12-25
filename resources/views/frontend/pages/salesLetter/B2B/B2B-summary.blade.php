@@ -36,7 +36,7 @@
             <h3 class="text-center text-purple">Life As a Business Owner Definitely Didn't Start Out This Way...</h3>
             <br>
             <p>Before I ever achieved even a tiny taste of success, there were a lot of roadblocks. So many times I was ready to throw in the towel.</p>
-            When I first started running my own business, 
+            When I first started running my own business,
                 <span class="hide"><span class="b2"></span></span>
                 <span class="hide">,<span class="b3"></span></span>
                 <span class="hide">,<span class="b4"></span></span>
@@ -57,7 +57,7 @@
                 <span class="hide">,<span class="b18"></span></span>
                 <span class="hide">,<span class="b19"></span></span>
                 <span class="hide">,<span class="b20"></span></span>.
-            
+
             <p>None of it worked out for me and I just ended up ready to quit, thinking I would never be able to <span class="q8">[fw8]</span>.</p>
             <h4>Of course, you know exactly what I'm talking about, right?</h4>
             Does Any of This Sound Familiar?
@@ -78,7 +78,7 @@
             <h4>Introducing...</h4>
             <h3 class="q23">[fw23]</h3>
             <h3 class="text-center text-purple"> The <span class="q5">[fw5]</span> that will allow you to <span class="q8">[fw8]</span> in the next <span class="q7">[fw7]</span>.</h3>
-            
+
             <p>So what exactly is this going to do for you? Can a simple <span class="q5">[fw5]</span> really turn everything around your business?</p>
             <p>Yes. Yes it can.</p>
             <p>The entrepreneur life can be stressful at times. That's the price we pay being so self-reliant.</p>
@@ -188,7 +188,7 @@
             </div>
 
             </div>
-            
+
             <br>
             <h3 class="text-center">You Don't Have to Take My Word For It...</h3>
             <br>
@@ -279,13 +279,13 @@
                     <p>*&nbsp; <span class="c40"></span> </p>
                 </div>
             </div>
-            
+
             <br>
             <br>
             <h4 class="text-center text-purple">[TESTIMONIAL SECTION END]</h4>
             <br>
             <br>
-            
+
             <h3 class="text-purple">"Yes! I'd Love to Get in On This, But What's the Catch?"</h3>
             <p>You've heard what I have to say. This <span class="q5">[fw5]</span> is wonderful. But what's the catch?</p>
             <p>I'll be honest, you could skip over this offer today and <span class="q45">[fw45]</span>.</p>
@@ -425,7 +425,7 @@
             <span class="q15">[fw15]</span>
             <p>P.S. You could skip over this offer, but then your business will stay right where you are now. Let me help you get out of the rut you've been in. Start achieving the results you deserve right now. Grab <span class="q23">[fw23]</span> by clicking the buy button above.</p>
             <p>P.P.S. Just a reminder, <span class="q1">[fw1]</span>. But don't worry. You're protected by our money back guarantee. So you can try it out today, and enjoy peace of mind. All you have to do is click the buy button above to get started.</p>
-            
+
             <h3 class="text-center text-purple">[Optin Form Goes Here]</h3>
             <br>
             <br>
@@ -435,7 +435,7 @@
                 <br>
                 Legal Disclaimers, Etc. Go Here
                 <br>
-                &lt;&lt;End Copy&gt;&gt;    
+                &lt;&lt;End Copy&gt;&gt;
             </footer>
 
 
@@ -459,7 +459,7 @@
               <svg data-micromodal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
                 <path d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
-              </svg>                
+              </svg>
             </button>
           </header>
           <div id="modal-1-content">
@@ -510,7 +510,7 @@
         </div>
       </div>
     </div>
-   @push('script')     
+   @push('script')
     <!-- Scripts -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../../public/header&sidenav.js"></script>
@@ -562,5 +562,6 @@ async function DownloadPDF(){
 }
     </script>
 <script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/letters.js')}}"></script>
 @endpush
 @endsection

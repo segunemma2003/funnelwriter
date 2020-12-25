@@ -84,11 +84,11 @@ Route::group(['prefix'=>'myscript'],function(){
         return view('frontend.pages.myscript');
     })->name('myscript');
     Route::get('/affiliateboxagency', function () {
-        return view('frontend.pages.myScripts.affiliateboxagency');
+        return view('frontend.pages.myScripts.afiliateboxagency');
     })->name('affiliateboxagency');
 
     Route::get('/affiliateboxlaunch', function () {
-        return view('frontend.pages.myScripts.affiliateboxlaunch');
+        return view('frontend.pages.myScripts.afiliateboxlaunch');
     })->name('affiliateboxlaunch');
 
 });
