@@ -25,11 +25,11 @@ class DocxGeneratorController extends Controller
 
         $section = $pw->addSection();
         $section->addText("Are you finding it really difficult to {$data['q8']}?");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("{$data['q4']} Reveals How to {$data['q6']} in Just {$data['q7']}");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Finally, You'll Be Able Push Your Business Forward With a Dead Simple {$data['q5']}");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("You're smart, driven and you've got big plans to push your business forward. But trying to {$data['q8']} is not a small task.
         As you struggle to keep your business afloat, stress has gotten the best of you
         
@@ -38,16 +38,16 @@ class DocxGeneratorController extends Controller
         ... and every flop has left you with less than desirable results.
         
         It's extremely frustrating when you know that you're capable of bigger and better things.");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("But There is Good News!");
         $section->addText("Hey there, my name is {$data['q15']} and yes, I know exactly how you're feeling.
 
         These days, I've managed to achieve quite a bit of success... I'm able to {$data['q16']}, I can also {$data['q17']}, and I'm very lucky in that I can {$data['q18']}.
         
         But I'll be honest...");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Life As a Business Owner Definitely Didn't Start Out This Way...");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Before I ever achieved even a tiny taste of success, there were a lot of roadblocks. So many times I was ready to throw in the towel.
 
         When I first started running my own business, .
@@ -60,7 +60,7 @@ class DocxGeneratorController extends Controller
         · You've {$data['q11']} which led to {$data['q12']}.
         
         · You've {$data['q13']} which just ended up in {$data['q14']}.");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Just Before I Was Ready to Close Up Shop, A Stroke of Luck Changed Everything.");
 
         $section->addText("You can only run into so many walls before you get so frustrated that the only option left seems to be quitting.
@@ -73,10 +73,10 @@ class DocxGeneratorController extends Controller
         Since then, I've run into multiple others who encountered the same, never-ending battle I went through. And it seemed pretty unfair to keep it to myself... especially since it's been such a huge stepping stone in my success.
         
         So I'd like to let you in on the \"secret\".");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Introducing...");
         $section->addText("{$data['q23']}");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("The {$data['q5']} that will allow you to {$data['q8']} in the next {$data['q7']}.");
         $section->addText("So what exactly is this going to do for you? Can a simple {$data['q5']} really turn everything around your business?
 
@@ -85,20 +85,20 @@ class DocxGeneratorController extends Controller
         The entrepreneur life can be stressful at times. That's the price we pay being so self-reliant.
         
         But you don't have to struggle with {$data['q3']} anymore.");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Here's How {$data['q23']} Will Benefit You:");
         $section->addText("You Don't Have to Take My Word For It...");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("[TESTIMONIAL SECTION START]");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("I've already shared this secret to a select group of business owners already. Truth be told, I wanted to guarantee that this would actually work time and time again.
 
         More importantly, I wanted to make sure you'd achieve the same results.
         
         And well... I'll let them speak for themselves...");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("[TESTIMONIAL SECTION END]");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("\"Yes! I'd Love to Get in On This, But What's the Catch?\"
         You've heard what I have to say. This {$data['q5']} is wonderful. But what's the catch?
         
@@ -111,15 +111,15 @@ class DocxGeneratorController extends Controller
         You won't have to pay anywhere near that amount today.
         
         In fact, I'm actually going to sweeten the deal for you right now.");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("[BONUS SECTION START]");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("When You Sign Up Today, You'll Also Get FREE Access To...");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("You'll Get {$data['q58']} Worth of Great Products Completely Free!");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("[BONUS SECTION END]");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("But there is one thing...
 
         {$data['q1']}. Once I close down the offer we won't release it again at this price. I'm doing this because {$data['q59']}.
@@ -136,14 +136,13 @@ class DocxGeneratorController extends Controller
         I'm stoked for you to jump in and get started. Even more so, I can't wait for you to see the results that are waiting for you on the other side.
         
         Here's a quick recap of everything you'll receive when you secure your copy right now:
-        
-        · {$data['q23']}. And You're also Getting:");
-        $section->addText("");
+        {$data['q23']}. And You're also Getting:");
+        $section->addTextBreak();
         $section->addText("When You Secure Your Copy of {$data['q23']} Today, You'll Get a Total Value of Over {$data['q61']} For ONLY...
         ");
-        $section->addText("");
-        $section->addText("INSERT YOUR BUY BUTTON HERE");
-        $section->addText("");
+        $section->addTextBreak();
+        $section->addText("INSE YOUR BUY BUTTON HERE");
+        $section->addTextBreak();
         $section->addText("Before I let you go, I wanted to send out a big thank you for reading this letter.
 
         I'm truly excited for you to get started with {$data['q23']} and see what a huge impact this will have on the success of your business.
@@ -152,12 +151,13 @@ class DocxGeneratorController extends Controller
         P.S. You could skip over this offer, but then your business will stay right where you are now. Let me help you get out of the rut you've been in. Start achieving the results you deserve right now. Grab {$data['q23']} by clicking the buy button above.
         
         P.P.S. Just a reminder, {$data['q1']}. But don't worry. You're protected by our money back guarantee. So you can try it out today, and enjoy peace of mind. All you have to do is click the buy button above to get started.");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("[Optin Form Goes Here]");
-        $section->addText("");
+        $section->addTextBreak();
         $section->addText("Your Company Contact Information, Phone, Email, Help Desk,
         Legal Disclaimers, Etc. Go Here
         <<End Copy>>");
+        $section->addTextBreak();
 
         $nameTosave="offres_".time().".docx";
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'Word2007');
