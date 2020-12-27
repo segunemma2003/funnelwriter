@@ -124,7 +124,7 @@
                   </li>
                 </ul>
                 <div class="btns">
-                  <a href="./short-letter-summary.html" class="btn-blue getSummary">Next</a>
+                  <a href="{{route('short-letter-summary')}}" class="btn-blue getSummary">Next</a>
                   <a href="#product" class="btn-light-blue form-nav">Previous</a>
                 </div>
               </div>
@@ -133,8 +133,8 @@
         </main>
     @push('script')
     <!-- Scripts -->
-    <script src="../../public/header&sidenav.js"></script>
-    <script src="../letters.js"></script>
+    <script src="{{asset('publics/header&sidenav.js')}}"></script>
+    <script src="{{asset('js/letters.js')}}"></script>
     <script>
          document.querySelector(".getSummary").addEventListener("click", storeInputs);
         const addInputs = document.querySelectorAll(".form .add");

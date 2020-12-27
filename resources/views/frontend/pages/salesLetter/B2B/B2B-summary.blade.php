@@ -513,7 +513,7 @@
    @push('script')
     <!-- Scripts -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../../public/header&sidenav.js"></script>
+    <script src="{{asset('publics/header&sidenav.js')}}"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
         MicroModal.init();

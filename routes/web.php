@@ -127,7 +127,8 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/long/letter', function () {
         return view('frontend.pages.salesLetter.Long.long-letter');
     })->name('long-letter');
-
+    Route::post('/letter/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'letterPDF'])->name('letterPDF');
+    Route::post('letter/docD',[App\Http\Controllers\DocxGeneratorController::class,'letterDOC'])->name('letterDOC');
     Route::get('/narative', function () {
         return view('frontend.pages.salesLetter.Narative.narative');
     })->name('narative');
@@ -137,6 +138,8 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/short/summary', function () {
         return view('frontend.pages.salesLetter.Short.short-letter-summary');
     })->name('short-letter-summary');
+    Route::post('/short/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'shortPDF'])->name('shortPDF');
+    Route::post('short/docD',[App\Http\Controllers\DocxGeneratorController::class,'shortDOC'])->name('shortDOC');
     Route::get('/short', function () {
         return view('frontend.pages.salesLetter.Short.short-letter');
     })->name('short');
