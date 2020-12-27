@@ -276,8 +276,8 @@
  @push('script')
 
     <!-- Scripts -->
-    <script src="../../public/header&sidenav.js"></script>
-    <script src="../letters.js"></script>
+    <script src="{{asset('publics/header&sidenav.js')}}"></script>
+    <script src="{{asset('js/letters.js')}}"></script>
     <script>
        document.querySelector(".getSummary").addEventListener("click", storeInputs);
         const addInputs = document.querySelectorAll(".form .add");
@@ -314,7 +314,6 @@
         }
       </script>
 
-    <script src="{{mix('js/app.js')}}"></script>
-    <script src="{{asset('js/letters.js')}}"></script>
+    
 @endpush
 @endsection

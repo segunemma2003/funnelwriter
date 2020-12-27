@@ -309,7 +309,7 @@
 
                 </ul>
                 <div class="btns">
-                  <a href="./long-letter-summary.html" class="btn-blue">Finish</a>
+                  <a href="{{route('long-letter-summary')}}" class="btn-blue">Finish</a>
                   <a href="#prospects" class="btn-light-blue form-nav">Cancel</a>
                 </div>
               </div>

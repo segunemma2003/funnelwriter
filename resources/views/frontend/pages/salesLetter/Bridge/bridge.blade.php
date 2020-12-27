@@ -141,7 +141,7 @@
                             </div>
                     </li>
                     <div class="btns">
-                        <a href="./ez-squeeze-summary.html" class="btn-blue getSummary">Next</a>
+                        <a href="{{route('ez-squeeze-summary')}}" class="btn-blue getSummary">Next</a>
                         <a href="#prospects" class="btn-light-blue form-nav">Previous</a>
                     </div>
                 </div>
@@ -151,8 +151,8 @@
         </main>
 @push('script')
     <!-- Scripts -->
-    <script src="../../public/header&sidenav.js"></script>
-    <script src="../letters.js"></script>
+    <script src="{{asset('publics/header&sidenav.js')}}"></script>
+    <script src="{{asset('js/letters.js')}}"></script>
     <script>
 
 document.querySelector(".getSummary").addEventListener("click", storeInputs);
@@ -196,7 +196,6 @@ document.querySelector(".getSummary").addEventListener("click", storeInputs);
         }
         }
     </script>
-<script src="{{mix('js/app.js')}}"></script>
-<script src="{{asset('js/letters.js')}}"></script>
+
 @endpush
 @endsection

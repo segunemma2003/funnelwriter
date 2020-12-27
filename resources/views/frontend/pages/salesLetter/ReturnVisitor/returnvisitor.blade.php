@@ -251,7 +251,7 @@
 
                 </ul>
                 <div class="btns">
-                  <a href="./long-letter-summary.html" class="btn-blue getSummary">Next</a>
+                  <a href="{{route('long-letter-summary')}}" class="btn-blue getSummary">Next</a>
                   <a href="#prospects" class="btn-light-blue form-nav">Previous</a>
                 </div>
               </div>

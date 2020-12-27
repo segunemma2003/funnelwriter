@@ -80,7 +80,7 @@
                       <input type="text">
                     </li>
                     <div class="btns">
-                        <a href="./ez-squeeze-summary.html" class="btn-blue getSummary">Next</a>
+                        <a href="{{asset('ez-squeeze-summary')}}" class="btn-blue getSummary">Next</a>
                         <a href="#prospects" class="btn-light-blue form-nav">Previous</a>
                     </div>
                 </div>
@@ -91,8 +91,9 @@
     @push('script')
 
     <!-- Scripts -->
-    <script src="../../public/header&sidenav.js"></script>
-    <script src="../letters.js"></script>
+   
+    <script src="{{asset('publics/header&sidenav.js')}}"></script>
+    <!-- <script src="../letters.js"></script> -->
     <script>
 
 document.querySelector(".getSummary").addEventListener("click", storeInputs);

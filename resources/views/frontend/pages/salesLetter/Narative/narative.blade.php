@@ -195,7 +195,7 @@
                   </li>
                 </ul>
                 <div class="btns">
-                  <a href="./short-letter-summary.html" class="btn-blue getSummary">Next</a>
+                  <a href="{{route('short-letter-summary')}}" class="btn-blue getSummary">Next</a>
                   <a href="#product" class="btn-light-blue form-nav">Cancel</a>
                 </div>
               </div>

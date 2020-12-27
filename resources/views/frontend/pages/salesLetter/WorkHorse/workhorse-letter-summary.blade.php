@@ -307,7 +307,7 @@
                   </li>
                 </ul>
                 <div class="btns">
-                  <a href="B2B-summary.html" class="btn-blue">Next</a>
+                  <a href="{{route('b2b-summary')}}" class="btn-blue">Next</a>
                   <a href="#process2" class="btn-light-blue form-nav">Previous</a>
                 </div>
               </div>

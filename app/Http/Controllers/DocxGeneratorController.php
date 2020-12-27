@@ -9,7 +9,220 @@ use \PhpOffice\PhpWord\Settings;
 class DocxGeneratorController extends Controller
 {
 
-    public function shortPDF(){
+    public function  horsePDF(){
+
+    }
+    public function horseDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."horsesummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+  
+    public function  web3PDF(){
+
+    }
+    public function web3DOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."web3summary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  venetianPDF(){
+
+    }
+    public function venetianDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."venetiansummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  vampirePDF(){
+
+    }
+    public function vampireDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."vampiresummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  visitorPDF(){
+
+    }
+    public function visitorDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."visitorsummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  narativePDF(){
+
+    }
+    public function narativeDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."narativesummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  knockPDF(){
+
+    }
+    public function knockDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."knocksummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  ticketPDF(){
+
+    }
+    public function ticketDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."ticketsummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+   
+    public function  bridgePDF(){
+
+    }
+    public function bridgeDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."bridgesummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  squeezePDF(){
+
+    }
+    public function squeezeDOC(Request $request){
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."squeezesummary.docx");
+        $toSave=time().".docx";
+        try{
+            foreach($data as $key=>$value){
+                
+                if($key=='list'){
+                    
+                        // var_dump($data[$key][0]);
+                        $list=[];
+                        if(isset($data[$key][0])){
+                          
+                            for($i=0; $i<count($data[$key][0]); $i++){
+                                $d=$data[$key][0][$i];
+                                array_push($list,"* {$d}");
+                            }
+                            $my_template->setValue($key,implode($list,"\n\n\n\n\n\n\n"));
+                        }else{
+                           
+                            $my_template->setValue($key,implode($data[$key],"\n\n\n\n\n\n\n"));
+                        }
+                        
+                        
+                    
+                }else{
+                    
+                    $my_template->setValue($key,$data[$key]);
+                }
+              
+            }
+       
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        }catch (Exception $e){
+            //handle exception
+        }
+        return response()->json(["data"=>$toSave]);
+    }
+    public function  shortPDF(){
 
     }
     public function shortDOC(Request $request){
@@ -17,9 +230,16 @@ class DocxGeneratorController extends Controller
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."shortsummary.docx");
         $toSave=time().".docx";
         try{
-        for($i=1; $i<=count($data); $i++){
-            $my_template->setValue("q{$i}", $data["q{$i}"]);
-        }
+            foreach($data as $key=>$value){
+                if(is_array($value)){
+                    $m=$data[$key][0];
+                    $n=$data[$key][1];
+                    $my_template->setValue($key,"{$m} : {$n}");
+                }else{
+                    $my_template->setValue($key,$data[$key]);
+                }
+               
+            }
         
        
         $my_template->saveAs(public_path($toSave));
@@ -37,9 +257,9 @@ class DocxGeneratorController extends Controller
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."longsummary.docx");
         $toSave=time().".docx";
         try{
-        for($i=1; $i<=count($data); $i++){
-            $my_template->setValue("q{$i}", $data["q{$i}"]);
-        }
+            foreach($data as $key=>$value){
+                $my_template->setValue($key,$data[$key]);
+            }
         
        
         $my_template->saveAs(public_path($toSave));

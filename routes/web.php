@@ -108,19 +108,26 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/bridge', function () {
         return view('frontend.pages.salesLetter.Bridge.bridge');
     })->name('bridge');
+    Route::post('/bridge/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'bridgePDF'])->name('bridgePDF');
+    Route::post('bridge/docD',[App\Http\Controllers\DocxGeneratorController::class,'bridgeDOC'])->name('bridgeDOC');
     Route::get('/ez-squeeze/summary', function () {
         return view('frontend.pages.salesLetter.Ez-squeeze.ez-squeeze-summary');
     })->name('ez-squeeze-summary');
     Route::get('/ez-squeeze', function () {
         return view('frontend.pages.salesLetter.Ez-squeeze.ez-squeeze');
     })->name('ez-squeeze');
+    Route::post('/squeeze/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'squeezePDF'])->name('squeezePDF');
+    Route::post('squeeze/docD',[App\Http\Controllers\DocxGeneratorController::class,'squeezeDOC'])->name('squeezeDOC');
     Route::get('/highticket', function () {
         return view('frontend.pages.salesLetter.HighTicket.highticket');
     })->name('highticket');
-
+    Route::post('/ticket/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'ticketPDF'])->name('ticketPDF');
+    Route::post('/ticket/docD',[App\Http\Controllers\DocxGeneratorController::class,'ticketDOC'])->name('ticketDOC');
     Route::get('/knocked-down', function () {
         return view('frontend.pages.salesLetter.KnockedDown.knockdown');
     })->name('knockdown');
+    Route::post('/knock/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'knockPDF'])->name('knockPDF');
+    Route::post('/knock/docD',[App\Http\Controllers\DocxGeneratorController::class,'knockDOC'])->name('knockDOC');
     Route::get('/long', function () {
         return view('frontend.pages.salesLetter.Long.long-letter-summary');
     })->name('long-letter-summary');
@@ -132,9 +139,13 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/narative', function () {
         return view('frontend.pages.salesLetter.Narative.narative');
     })->name('narative');
+    Route::post('/narative/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'narativePDF'])->name('narativePDF');
+    Route::post('narative/docD',[App\Http\Controllers\DocxGeneratorController::class,'narativeDOC'])->name('narativeDOC');
     Route::get('/return/visitor', function () {
         return view('frontend.pages.salesLetter.ReturnVisitor.returnvisitor');
     })->name('returnvisitor');
+    Route::post('/visitor/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'visitorPDF'])->name('visitorPDF');
+    Route::post('/visitor/docD',[App\Http\Controllers\DocxGeneratorController::class,'visitorDOC'])->name('visitorDOC');
     Route::get('/short/summary', function () {
         return view('frontend.pages.salesLetter.Short.short-letter-summary');
     })->name('short-letter-summary');
@@ -147,18 +158,23 @@ Route::group(['prefix'=>'sales'],function(){
     Route::get('/vampire', function () {
         return view('frontend.pages.salesLetter.Vampire.vampire');
     })->name('vampire');
-
+    Route::post('/vampire/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'vampirePDF'])->name('vampirePDF');
+    Route::post('/vampire/docD',[App\Http\Controllers\DocxGeneratorController::class,'vampireDOC'])->name('vampireDOC');
     Route::get('/venetian', function () {
         return view('frontend.pages.salesLetter.Venetian.venetian');
     })->name('venetian');
+    Route::post('/venetian/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'venetianPDF'])->name('venetianPDF');
+    Route::post('/venetian/docD',[App\Http\Controllers\DocxGeneratorController::class,'venetianDOC'])->name('venetianDOC');
     Route::get('/web3', function () {
         return view('frontend.pages.salesLetter.Web3.web3');
     })->name('web3');
-
+    Route::post('/web3/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'web3PDF'])->name('web3PDF');
+    Route::post('web3/docD',[App\Http\Controllers\DocxGeneratorController::class,'web3DOC'])->name('web3DOC');
     Route::get('/workhorse/summary', function () {
         return view('frontend.pages.salesLetter.WorkHorse.workhorse-letter-summary');
     })->name('workhorse.summary');
-
+    Route::post('/horse/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'horsePDF'])->name('horsePDF');
+    Route::post('/horse/docD',[App\Http\Controllers\DocxGeneratorController::class,'horseDOC'])->name('horseDOC');
     Route::get('/workhorse', function () {
         return view('frontend.pages.salesLetter.WorkHorse.workhorse-letter');
     })->name('workhorse');
