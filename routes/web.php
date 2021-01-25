@@ -203,7 +203,7 @@ Route::post('/videosales/ppt',[App\Http\Controllers\PresentationController::clas
 Route::get('/webinar-script', function () {
     return view('frontend.pages.webinar-script');
 })->name('webinar-script');
-Route::post('/webinar/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'horsePDF'])->name('horsePDF');
+// Route::post('/webinar/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'horsePDF'])->name('horsePDF');
     // Route::post('/horse/docD',[App\Http\Controllers\DocxGeneratorController::class,'horseDOC'])->name('horseDOC');
 Route::get('/webinar-writer', function () {
     return view('frontend.pages.webinar-writer');
