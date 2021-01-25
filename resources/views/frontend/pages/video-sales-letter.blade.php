@@ -171,6 +171,7 @@
             </div>
           </main>
    @push('script')
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{mix('js/app.js')}}"></script>
 <script src="{{asset('js/video-sales-letter.js')}}"></script>
 @endpush

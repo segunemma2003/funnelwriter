@@ -470,10 +470,10 @@
                         </div>
 
                         <div class="buttons">
-                            <button class="inverse" onclick="goToForm(4)">
+                            <button class="inverse" >
                                 <p>Previous</p>
                             </button>
-                            <button class="normal">
+                            <button class="normal" onclick="downloadDoc()">
                                 <p>Submit</p>
                             </button>
                         </div>
@@ -482,6 +482,7 @@
             </div>
         </main>
         @push('script')
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{mix('js/app.js')}}"></script>
 <script src="{{asset('js/webinar-script.js')}}"></script>
 @endpush

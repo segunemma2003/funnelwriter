@@ -46,5 +46,6 @@ function addElement (e){
 
 function fillEditor() {
   let answers = [...document.querySelectorAll("li input")].map(input => input.value ? `<p>${input.value}</p><br>` : "");
+  console.log(answers);
   document.querySelector(".note-editable").innerHTML = answers.join(" ");
 }

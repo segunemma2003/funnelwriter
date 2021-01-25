@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/ppt',[App\Http\Controllers\PresentationController::class,'generatePPt'])->name('ppt');
 Route::group(['middleware'=>'auth'],function(){
 
 
@@ -197,12 +198,18 @@ Route::group(['prefix'=>'trainings'],function(){
 Route::get('/video-sales', function () {
     return view('frontend.pages.video-sales-letter');
 })->name('video-sales');
+Route::post('/videosales/ppt',[App\Http\Controllers\PresentationController::class,'generatePPt'])->name('videoPPT');
+// Route::post('/horse/docD',[App\Http\Controllers\DocxGeneratorController::class,'horseDOC'])->name('horseDOC');
 Route::get('/webinar-script', function () {
     return view('frontend.pages.webinar-script');
 })->name('webinar-script');
+Route::post('/webinar/pdfD',[App\Http\Controllers\DocxGeneratorController::class,'horsePDF'])->name('horsePDF');
+    // Route::post('/horse/docD',[App\Http\Controllers\DocxGeneratorController::class,'horseDOC'])->name('horseDOC');
 Route::get('/webinar-writer', function () {
     return view('frontend.pages.webinar-writer');
 })->name('webinar-writer');
+Route::post('/webinar/ppt',[App\Http\Controllers\PresentationController::class,'generatePPt'])->name('webPPt');
+    Route::post('/webinar/doc',[App\Http\Controllers\PresentationController::class,'generateDoc'])->name('webDoc');
 
 Route::get('/funnel', function () {
     return view('frontend.pages.funnel-launch-planner');

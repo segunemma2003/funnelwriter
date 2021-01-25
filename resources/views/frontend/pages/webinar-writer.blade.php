@@ -473,7 +473,7 @@
                             <button class="inverse" onclick="goToForm(4)">
                                 <p>Previous</p>
                             </button>
-                            <button class="normal">
+                            <button class="normal" onclick="downloadPPt()">
                                 <p>Submit</p>
                             </button>
                         </div>
@@ -482,7 +482,10 @@
             </div>
         </main>
         @push('script')
-<script src="{{mix('js/app.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.4.0/libs/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.4.0/dist/pptxgen.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="{{mix('js/app.js')}}"></script> -->
 <script src="{{asset('js/webinar-script.js')}}"></script>
 @endpush
 @endsection

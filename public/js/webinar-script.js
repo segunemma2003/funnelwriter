@@ -17,7 +17,7 @@ const process3Total = process3.querySelector('.total');
 const process4 = document.querySelector('.process4');
 const process4Status = process4.querySelector('.completed');
 const process4Total = process4.querySelector('.total');
-const process5 = document.querySelector('.tell__product');
+const process5 = document.querySelector('.process5');
 const process5Status = process5.querySelector('.completed');
 const process5Total = process5.querySelector('.total');
 
@@ -178,6 +178,59 @@ const checkActive = (id) => {
             checker.classList.remove('in__progress');
         }
     })
+}
+const downloadDoc= async ()=>{
+    $data=[]
+    form1.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    }) 
+    form2.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form3.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form4.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form5.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    });
+    
+    let response= await axios.post('/webinar/doc',{$data}).then((res)=>{
+        console.log(res.data.data)
+        window.open("/"+res.data.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+   
+}
+const  downloadPPt= async ()=>{
+    $data=[]
+    form1.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    }) 
+    form2.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form3.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form4.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    })
+    form5.querySelectorAll('.input').forEach((input)=>{
+        $data.push(input.value)
+    });
+    
+    let response= await axios.post('/webinar/ppt',{$data}).then((res)=>{
+        console.log(res.data.data)
+        window.open("/"+res.data.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+   
+
 }
 
 // Change formstep
