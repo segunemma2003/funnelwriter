@@ -12,14 +12,158 @@ use PhpOffice\PhpPresentation\Shape\RichText\Paragraph;
 
 class PresentationController extends Controller
 {
-// public function generateDoc()
-// {
-//       $oReader = IOFactory::createReader('PowerPoint2007');
-//       $oReader->load(public_path()."/powerpoint/$data");
-//       foreach($oReader as $res){
-//             echo $res->display();
-//       }
-// }
+public function genPptvid(Request $request)
+{
+      $objPHPPowerPoint = new PhpPresentation();
+
+      $data=(array) $request->all()['$data'];
+      $objPHPPowerPoint->removeSlideByIndex(0);
+      $this->slide1($objPHPPowerPoint,"How to achieve {$data['fw1']}, IN {$data['fw26']},\n 
+      WITHOUT {$data['fw12']}. \n (EVEN IF {$date['fw84']})");
+      $this->slide1($objPHPPowerPoint,"BEFORE WE CONTINUE… \nHere’s what you’re going to discover during this workshop…");
+      $this->slide1($objPHPPowerPoint,"How you can {$data['fw9']} using the \n {$data['fw6']} Method… without {$data['fw3']},\n and without {$data['fw4']}...");
+      $this->slide1($objPHPPowerPoint,"The counter-intuitive way to \n brand yourself as an {$data['fw5']} so \n you can {$data['fw7']}…");
+      $this->slide1($objPHPPowerPoint,"The {$data['fw8']} keys to {$data['fw9']}...");
+      $this->slide1($objPHPPowerPoint,"How you can {$data['fw10']} from the {$data['fw11']}…");
+      $this->slide1($objPHPPowerPoint,"My PROMISE to you.");
+      $this->slide1($objPHPPowerPoint, "A step-by-step strategy for {$data['fw9']} \n without {$data['fw12']}.");
+      $this->slide1($objPHPPowerPoint,"I have some really COOL gifts for \n you. ");
+      $this->slide1($objPHPPowerPoint,"Plus, some CRUCIAL things you \n need to understand.");
+      $this->slide1($objPHPPowerPoint,"Does this sound like you?");
+      $this->slide1($objPHPPowerPoint,"Do you have a special gift in \n {$data['fw13']}, but you {$data['fw14']}?");
+      $this->slide1($objPHPPowerPoint,"Are you tired of {$data['fw15']} while {$data['fw16']} succeed?");
+      $this->slide1($objPHPPowerPoint,"Are you {$data['fw14']}?");
+      $this->slide1($objPHPPowerPoint,"Do you have a {$data['fw17']}, but you \n get {$data['fw18']}?");
+      $this->slide1($objPHPPowerPoint, "Most of what we’ve been told \n about {$data['fw1']} is COMPLETELY \n WRONG…");
+      $this->slide1($objPHPPowerPoint, "The real problem? ");
+      $this->slide1($objPHPPowerPoint,"{$data['fw19']}");
+      $this->slide1($objPHPPowerPoint,"…without {$data['fw3']}");
+      $this->slide1($objPHPPowerPoint,"The ONE thing you need to \n know…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw20']} {$data['fw1']} by {$data['fw85']}.");
+      $this->slide1($objPHPPowerPoint,"If you're like most people, you \n know you deserve {$data['fw21']}... but \n {$data['fw3']}.");
+      $this->slide1($objPHPPowerPoint,"THE GAME HAS CHANGED.");
+      $this->slide1($objPHPPowerPoint,"So who am I?…");
+      $this->slide1($objPHPPowerPoint,"Known as…");
+      $this->slide1($objPHPPowerPoint,"Creator/author of…");
+      $this->slide1($objPHPPowerPoint,"Featured on…");
+      $this->slide1($objPHPPowerPoint,"For the past {$data['fw22']}, I’ve been…");
+      $this->slide1($objPHPPowerPoint,"My superpower is helping \n {$data['fw20']} {$data['fw1']} WITHOUT {$data['fw3']}");
+      $this->slide1($objPHPPowerPoint,"CONFESSION!");
+      $this->slide1($objPHPPowerPoint,"YES, I struggled too!");
+      $this->slide1($objPHPPowerPoint,"ROCK BOTTOM! ");
+      $this->slide1($objPHPPowerPoint,"{$data['fw23']}...");
+      $this->slide1($objPHPPowerPoint,"{$data['fw24']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw25']}");
+      $this->slide1($objPHPPowerPoint,"So if you’ve ever been nervous \n about\n {$data['fw1']} …");
+      $this->slide1($objPHPPowerPoint,"THE TURNING POINT…");
+      $this->slide2($objPHPPowerPoint,"Decided to {$data['fw26']}","Decided to commit to {$data['fw27']}");
+      $this->slide1($objPHPPowerPoint,"And what happened next was \n rather unexpected…");
+      $this->slide1($objPHPPowerPoint,"My life changed FOREVER…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw28']}...");
+      $this->slide1($objPHPPowerPoint,"{$data['fw29']}...");
+      $this->slide1($objPHPPowerPoint,"I “ACCIDENTALLY” discovered \n {$data['fw30']}");
+      $this->slide1($objPHPPowerPoint,"The only pathway to lasting \n success is to {$data['fw90']}");
+      $this->slide1($objPHPPowerPoint,"Stop {$data['fw31']}.");
+      $this->slide1($objPHPPowerPoint,"Start {$data['fw32']}.");
+      $this->slide1($objPHPPowerPoint,"Here’s why this is important…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw33']} have been able to {$data['fw9']} \n with my {$data['fw34']}.");
+      $this->slide1($objPHPPowerPoint,"This is a FAST/EASY system for \n [achieving another big result].");
+      $this->slide1($objPHPPowerPoint,"I want to help you [achieve  \n another big goal] in {$data['fw35']}.");
+      $this->slide1($objPHPPowerPoint,"So let’s get into the {$data['fw36']} to \n {$data['fw1']}:");
+      $this->slide1($objPHPPowerPoint,"{$data['fw33']} have been able to {$data['fw9']} \n with my {$data['fw34']}.");
+      $this->slide1($objPHPPowerPoint,"Key 1 {$data['fw37']}");
+      $this->slide1($objPHPPowerPoint,"Here’s why this is important…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw38']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw39']}");
+      $this->slide1($objPHPPowerPoint,"Example / Testimonial");
+      $this->slide1($objPHPPowerPoint,"{$data['fw42']}");
+      $this->slide1($objPHPPowerPoint,"Here’s why this is important…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw42']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw43']}");
+      $this->slide1($objPHPPowerPoint,"Example / Testimonial");
+      $this->slide1($objPHPPowerPoint,"Key 3 {$data['fw45']}");
+      $this->slide1($objPHPPowerPoint,"Here’s why this is important…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw46']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw47']}");
+      $this->slide1($objPHPPowerPoint,"Example / Testimonial");
+      $this->slide1($objPHPPowerPoint,"Key 4 {$data['fw49']}");
+      $this->slide1($objPHPPowerPoint,"Here’s why this is important…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw50']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw50']}");
+      $this->slide1($objPHPPowerPoint,"Example / Testimonial");
+      $this->slide1($objPHPPowerPoint,"But {$data['fw3']}");
+      $this->slide1($objPHPPowerPoint,"If you’re like most people…");
+      $this->slide1($objPHPPowerPoint,"You probably {$data['fw52']}.");
+      $this->slide1($objPHPPowerPoint,"You may {$data['fw53']}.");
+      $this->slide1($objPHPPowerPoint,"You likely {$data['fw54']}.");
+      $this->slide1($objPHPPowerPoint,"So clearly {$data['fw55']} works.");
+      $this->slide1($objPHPPowerPoint,"What I’ve just shown you is the \n exact system I’ve personally \n used to {$data['fw1']}.");
+      $this->slide1($objPHPPowerPoint,"And if you’d like me to help you \n implement everything we’ve  \ngone over, I’d be honored.");
+      $this->slide1($objPHPPowerPoint,"Here’s how we’ll do it…");
+      $this->slide1($objPHPPowerPoint,"Introducing...");
+      $this->slide1($objPHPPowerPoint,"{$data['fw56']} \n & {$data['fw57']}");
+      $this->slide1($objPHPPowerPoint,"I’m not going to get all hypey.");
+      $this->slide1($objPHPPowerPoint,"You’ve listened to me…");
+      $this->slide1($objPHPPowerPoint,"You’ve heard my story…");
+      $this->slide1($objPHPPowerPoint,"You know what I’m saying can  \n help you…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw56']} includes:");
+      $this->slide1($objPHPPowerPoint,"{$data['fw58']} so you can {$data['fw60']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw61']} so you can {$data['fw63']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw64']} so you can {$data['fw66']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw67']} so you can {$data['fw69']}");
+      $this->slide1($objPHPPowerPoint,"Imagine if you {$data['fw86']} \n in your life…");
+      $this->slide1($objPHPPowerPoint,"This is the ULTIMATE game \n changer.");
+      $this->slide1($objPHPPowerPoint,"Get {$data['fw87']} to {$data['fw88']}.");
+      $this->slide1($objPHPPowerPoint,"Get {$data['fw89']} to {$data['fw90']}.");
+      $this->slide1($objPHPPowerPoint,"Get {$data['fw91']} to {$data['fw92']}.");
+      $this->slide1($objPHPPowerPoint,"How does it work?");
+      $this->slide1($objPHPPowerPoint,"{$data['fw70']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw71']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw56']} becomes your secret \n weapon");
+      $this->slide1($objPHPPowerPoint,"{$data['fw60']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw63']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw66']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw69']}");
+      $this->slide1($objPHPPowerPoint,"But It Gets Better…");
+      $this->slide1($objPHPPowerPoint,"Bonus #1: {$data['fw72']}. \n A {$data['fw73']} value.");
+      $this->slide1($objPHPPowerPoint,"{$data['fw74']}");
+      $this->slide1($objPHPPowerPoint,"Bonus #2: {$data['fw75']}. \n A {$data['fw76']} value.");
+      $this->slide1($objPHPPowerPoint,"{$data['fw77']}");
+      $this->slide1($objPHPPowerPoint,"How much is {$data['fw56']}?");
+      $this->slide1($objPHPPowerPoint,"Normally, this would easily cost \n {$data['fw79']}…");
+      $this->slide1($objPHPPowerPoint,"But because you’re here, you’re \n getting [awesome feature]...");
+      $this->slide1($objPHPPowerPoint,"PLUS {$data['fw78']}...");
+      $this->slide1($objPHPPowerPoint,"For just {$data['fw83']}.");
+      $this->slide1($objPHPPowerPoint,"Best Guarantee Ever!");
+      $this->slide1($objPHPPowerPoint,"I 100% stand behind {$data['fw56']}. If \n you're unhappy for any reason \n whatsoever, let me know within  \n 30 days and we'll give you a full \n refund.");
+      $this->slide1($objPHPPowerPoint,"Here’s what others are saying \n about {$data['fw56']}…");
+      $this->slide1($objPHPPowerPoint,"{$data['fw80']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw81']}");
+      $this->slide1($objPHPPowerPoint,"Recap:");
+      $this->slide1($objPHPPowerPoint,"1. {$data['fw58']} a {$data['fw59']} value.");
+      $this->slide1($objPHPPowerPoint,"2. {$data['fw61']} a {$data['fw62']} value.");
+      $this->slide1($objPHPPowerPoint,"3. {$data['fw64']} a {$data['fw65']} value.");
+      $this->slide1($objPHPPowerPoint,'4.  [Feature #4] a [$X] value.');
+      $this->slide1($objPHPPowerPoint,"{$data['fw82']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw93']}");
+      $this->slide1($objPHPPowerPoint,"{$data['fw94']}");
+      $this->slide1($objPHPPowerPoint,"Again, you get:");
+      $this->slide2($objPHPPowerPoint,"{$data['fw58']} a {$data['fw59']} value","{$data['fw61']} a {$data['fw62']} value","{$data['fw64']} a {$data['fw65']} value","{$data['fw67']} a {$data['fw68']} value");
+      $this->slide1($objPHPPowerPoint,"If not now… when?");
+      $this->slide1($objPHPPowerPoint,"When will you finally be able \n to {$data['fw86']}.");
+      $this->slide1($objPHPPowerPoint,"When you will finally stop {$data['fw3']} \n and start {$data['fw86']}?");
+      $this->slide1($objPHPPowerPoint,"When will you finally take \n action?");
+      $this->slide1($objPHPPowerPoint,"Make your decision, then sign \n up for this limited time  special  \n offer by going to [CALL TO \n ACTION]");
+      $this->slide1($objPHPPowerPoint,"This offer is only good until \n {$data['fw93']}. \n\n After that? {$data['fw94']}.");
+      $this->slide1($objPHPPowerPoint,"It’s time to make your decision and take a \n leap forward.\n Join {$data['fw56']} \n[insert url of sales page] \nAny questions?");
+      $oWriterPPTX = IOFactory::createWriter($objPHPPowerPoint, 'PowerPoint2007');
+        $file=strtotime(now());
+       $oWriterPPTX->save(public_path()."/powerpoint/{$file}.pptx");
+      //  $this->generatePPt1("$file.pptx");
+      return response()->json(['data'=>"powerpoint/{$file}.pptx"]);
+
+      
+}
     public function generateDoc(Request $request){
        
         $objPHPPowerPoint = new PhpPresentation();
@@ -83,53 +227,20 @@ $objPHPPowerPoint->removeSlideByIndex(0);
       return response()->json(['data'=>"powerpoint/{$file}.pptx"]);
 
 }
-public function generatePPt2(){
-      $objPHPPowerPoint = new PhpPresentation();
 
-// Create slide
-$currentSlide = $objPHPPowerPoint->getActiveSlide();
-
-// Create a shape (drawing)
-$shape = $currentSlide->createDrawingShape();
-$shape->setName('PHPPresentation logo')
-      ->setDescription('PHPPresentation logo')
-      ->setPath(public_path().'/phppowerpoint_logo.gif')
-      ->setHeight(36)
-      ->setOffsetX(10)
-      ->setOffsetY(10);
-$shape->getShadow()->setVisible(true)
-                   ->setDirection(45)
-                   ->setDistance(10);
-
-// Create a shape (text)
-$shape = $currentSlide->createRichTextShape()
-      ->setHeight(300)
-      ->setWidth(600)
-      ->setOffsetX(170)
-      ->setOffsetY(180);
-$shape->getActiveParagraph()->getAlignment()->setHorizontal( Alignment::HORIZONTAL_CENTER );
-$textRun = $shape->createTextRun('Thank you for using PHPPresentation!');
-$textRun->getFont()->setBold(true)
-                   ->setSize(60)
-                   ->setColor( new Color( 'FFE06B20' ) );
-
-$oWriterPPTX = IOFactory::createWriter($objPHPPowerPoint, 'PowerPoint2007');
-$file=strtotime(now());
-return $oWriterPPTX->save(public_path()."/powerpoint/{$file}.pptx");
-}
-public function generatePPt1($data)
-{
-      $oReader = IOFactory::createReader('PowerPoint2007');
-      $oReader->load(public_path()."/powerpoint/$data");
-      foreach($oReader as $res){
-            echo $res->display();
-      }
-}
-    public function generatePPt(Request $request){
+// public function generatePPt1($data)
+// {
+//       $oReader = IOFactory::createReader('PowerPoint2007');
+//       $oReader->load(public_path()."/powerpoint/$data");
+//       foreach($oReader as $res){
+//             echo $res->display();
+//       }
+// }
+public function generatePPt(Request $request){
        
         $objPHPPowerPoint = new PhpPresentation();
 
-$data=(array) $request->all()['$data'];
+$data=(array) $request->all()['data'];
 $objPHPPowerPoint->removeSlideByIndex(0);
         $this->slide1($objPHPPowerPoint,"I have two news for you");
         $this->slide1($objPHPPowerPoint,"The good and bad");
