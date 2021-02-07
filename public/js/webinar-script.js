@@ -181,20 +181,31 @@ const checkActive = (id) => {
 }
 const downloadDoc= async ()=>{
     $data=[]
+    total=0
     form1.querySelectorAll('.input').forEach((input)=>{
-        $data.push(input.value)
+        total+=1
+        $data[total]=input.value;
+        // $data.push(input.value)
     }) 
     form2.querySelectorAll('.input').forEach((input)=>{
-        $data.push(input.value)
+        total+=1
+        $data[total]=input.value;
+        // $data.push(input.value)
     })
     form3.querySelectorAll('.input').forEach((input)=>{
-        $data.push(input.value)
+        total+=1
+        $data[total]=input.value;
+        // $data.push(input.value)
     })
     form4.querySelectorAll('.input').forEach((input)=>{
-        $data.push(input.value)
+        total+=1
+        $data[total]=input.value;
+        // $data.push(input.value)
     })
     form5.querySelectorAll('.input').forEach((input)=>{
-        $data.push(input.value)
+        total+=1
+        $data[total]=input.value;
+        // $data.push(input.value)
     });
     
     let response= await axios.post('/webinar/doc',{$data}).then((res)=>{

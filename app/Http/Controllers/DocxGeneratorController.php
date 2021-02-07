@@ -618,8 +618,35 @@ class DocxGeneratorController extends Controller
         }
         return response()->json(["data"=>$toSave]);
     }
-    
     public function salesPDF(Request $request)
+    {
+        $pdfname="offresales_".time().".pdf";
+        $data=json_decode($request->all()['data'],true);
+        $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."b2bsummary.docx");
+        $toSave=time().".docx";
+        try{
+        foreach($data as $key=>$value){
+            $my_template->setValue($key,$data[$key]);
+        }
+        
+        
+       
+        $my_template->saveAs(public_path($toSave));
+        $domPdfPath = base_path('vendor/dompdf/dompdf');
+        \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
+        \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+
+        //Save it into PDF
+    $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
+    $PDFWriter->save($pdfname); 
+    return response()->json(["data"=>$pdfname]);
+        }catch (Exception $e){
+            //handle exception
+        }
+      
+    }
+    public function salesPDFs(Request $request)
     {
         $data=json_decode($request->all()['data'],true);
        
