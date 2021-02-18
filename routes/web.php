@@ -26,10 +26,25 @@ Route::get('/', function () {
 Route::get('/email-copy', function () {
     return view('frontend.pages.email-copy');
 })->name('email-copy');
+
+Route::get('/email-copy/emailaffiliate', function () {
+    return view('frontend.pages.emails.emailaffiliate');
+})->name('emailaffiliate');
+
+Route::get('/email-copy/emailworksmart', function () {
+    return view('frontend.pages.emails.emailworksmart');
+})->name('emailworksmart');
+
+
+Route::get('/email-copy/emailfollowup', function () {
+    return view('frontend.pages.emails.emailfollowup');
+})->name('emailfollowup');
 Route::get('/email-copy/emailcomics', function () {
     return view('frontend.pages.emails.emailcomics');
 })->name('emailcomics');
-
+Route::get('/email-copy/email3door', function () {
+    return view('frontend.pages.emails.email3door');
+})->name('email3door');
 Route::get('/email-copy/emailfacebook', function () {
     return view('frontend.pages.emails.emailfacebook');
 })->name('emailfacebook');
@@ -44,6 +59,7 @@ Route::get('/email-copy/emailgiveaway', function () {
 Route::get('/email-copy/emailadgen', function () {
     return view('frontend.pages.emails.emailleadgen');
 })->name('emailleadgen');
+
 
 Route::group(['prefix'=>'headline'],function(){
     Route::get('/', function () {

@@ -1,4 +1,13 @@
 @extends('frontend.layouts.master')
+@section('header')
+<div class="generate">
+    <h2  style="color:white !important;">B2B Lead Nurturing</h2>
+    <p  style="color:white !important;">Use this email to nurture your B2B leads</p>
+    </div>
+    <div class="breadcrumb">
+    <span>Home</span> / <span class="active">Email copy</span>
+</div>
+@endsection
 @section('content')
 @push('style')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">

@@ -1,4 +1,14 @@
 @extends('frontend.layouts.master')
+@section('header')
+<div class="generate">
+    <h2  style="color:white !important;">Giveaway Bonding Sequence</h2>
+    <p  style="color:white !important;">Establish a strong bonding with your subscribers after giveaway</p>
+    </div>
+    <div class="breadcrumb">
+    <span>Home</span> / <span class="active">Email copy</span>
+</div>
+@endsection
+
 @section('content')
 @push('style')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
@@ -10,172 +20,176 @@
         <main class="main__content">
           <div class="form">
             <ul class="titles">
-                <li class="active">
-                  <div>
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                  
-                      Personal Information
-                  </div>
-                      <span class="status"></span>  
-                </li>
-                <li>
-                  <div>
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                  
-                          Tell me about your product 
-                  </div>
-                      <span class="status"></span>  
-                </li> <li>
-                  <div>
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>                  
-                      Product features and benefit
-                  </div>
-                      <span class="status"></span>  
-                </li>
-                <li>
-                  <div>
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                          
-                  Let’s rounnd up         
-                  </div>
-                  <span class="status"></span> 
-                </li>
-              </ul>
+              <li class="active">
+                <div>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                  
+                    Personal Information
+                </div>
+                    <span class="status"></span>  
+              </li>
+              <li>
+                <div>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                  
+                        Tell me about your product 
+                </div>
+                    <span class="status"></span>  
+              </li> <li>
+                <div>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                  
+                    Product features and benefit
+                </div>
+                    <span class="status"></span>  
+              </li>
+              <li>
+                <div>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 3.00562L11 13.0156L8 10.0156" stroke="#35EC81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                          
+                Let’s rounnd up         
+                </div>
+                <span class="status"></span> 
+              </li>
+            </ul>
+            
             <form id="short">
-              <div id="products" class="questions">
-                <ul>
-                  <li class="question" id="q4">
+              <div id="products" class="questions active">
+                <ul >
+                  <!-- <li class="question" id="q4">
                     <label class="label">NAME OF PROFILE</label>
                     <div class="example">What name do you want to use in saving this profile?</div>
                     <input type="text">
-                  </li>
-                  <li class="question" id="q5">
+                  </li> -->
+                  <li class="question">
                     <label class="label">YOUR NAME</label>
                     <div class="example">(Ex: Tarzs Ighor)</div>
-                    <input type="text">
+                    <input type="text" id="q1">
                   </li>
-                  <li class="question" id="q7">
+                  <!-- <li class="question">
                     <label class="label">YOUR TAG LINE</label>
                     <div class="example">"Your title, which will appear on the bottom of sender name</div>
-                    <input type="text">
-                  </li>
-                  <li class="question" id="q8">
-                    <label class="label">WHAT IS YOUR COMPANY’S PHONE NUMBER?</label>
-                    <div class="example">(Ex: +234*******)</div>
-                    <input type="text">
-                  </li>
+                    <input type="text" id="">
+                  </li> -->
                 </ul>
                 <div class="btns">
                   <a href="#prospects" class="btn-blue form-nav">Next</a>
                 </div>
               </div>
               <div id="prospects" class="questions">
-                <ul>
-                  <li class="question" id="q1">
+                <ul >
+                  <li class="question">
                     <label class="label" >NAME OF PRODUCT</label>
-                    <div class="example">What is the name of the product/service you want to sell?</div>
-                    <input type="text">
+                    <div class="example">Funnelhack</div>
+                    <input type="text" id="q4">
                   </li>
-                  <li class="question" id="q2">
+                  <li class="question">
                     <label class="label">TYPE OF PRODUCT</label>
-                    <div class="example">(Ex: Killer-Sales-Writing-System (KSWS)
+                    <div class="example">(Ex: Software, Ebook, Course)
                         </div>
-                    <input type="text">
+                    <input type="text" id="q3">
                   </li>
-                  <li class="question" id="q3">
+                  <li class="question">
                     <label class="label">WHAT IS THE SCARCITY OF THIS PRODUCT</label>
                     <div class="example">(Ex: 7 slot left, 3 hours left etc)</div>
-                    <input type="text">
+                    <input type="text" id="q5">
                   </li>
-                  <li class="question" id="q6">
+                  <li class="question">
+                    <label class="label">WHAT IS THE REASON FOR SCARCITY OF THIS PRODUCT?</label>
+                    <div class="example">(Ex: this product took me a lot of time, trials and error and experience to prepare)</div>
+                    <input type="text" id="q25">
+                  </li>
+                  <li class="question">
                     <label class="label">WHAT IS THE PROSPECT’S BIG STRUGGLE?</label>
                     <div class="example">(Ex: sales copies that pull in sales)</div>
-                    <input type="text">
+                    <input type="text" id="q6">
                   </li>
-                  <li class="question" id="q8">
-                    <label class="label">WHAT IS YOUR DESIRE END RESULT (BE SPECIFIC) OF YOUR PRODUCT?</label>
-                    <div class="example">Ex: Write highly converting copies that pull in sales without having to higher expensive copywriter)</div>
-                    <input type="text">
-                  </li>
-                  <li class="question" id="q9">
+                  <li class="question">
                     <label class="label">WHAT DOES YOUR READERS REALLY WANT TO ACHIEVE (MAIN GOAL)</label>
                     <div class="example">Ex: write highly converting sales copies that pull in crazy cash system)</div>
-                    <input type="text">
+                    <input type="text" id="q8">
                   </li>
                 </ul>
                 <div class="btns">
                     <a href="#products" class="btn-light-blue form-nav">Previous</a>
-                  <a href="#proposals" class="btn-blue  form-nav">Next</a>
+                  <a href="#proposals" class="btn-blue form-nav">Next</a>
                 </div>
               </div>
               <div id="proposals" class="questions">
                 <ul >
-                  <li class="question" id="q1">
-                      <h3>WHAT ARE THE PRODUCT FEATURES AND BENEFIT?</h3>
-                    <label class="label" >PRODUCT FEATURE #1</label>
-                    <div class="example">Ex: Over 200 powerful template in its engine</div>
-                    <input type="text">
-                    <div class="add">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
-                            <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>                            
-                        Add more features of the product
-                    </div>
-                  </li>
+                  <h3>WHAT ARE THE PRODUCT FEATURES AND BENEFIT?</h3>
+                  <div>
+                    <li class="question">
+                      <label class="label" >PRODUCT FEATURE #<span class="no">1</span></label>
+                      <div class="example">Ex: Over 200 powerful template in its engine</div>
+                      <input type="text" id="a1">
+                    </li>
+                    <li class="question">
+                      <label class="label" >Benefit of Feature #<span class="no">1</span></label>
+                      <div class="example">Ex: Over 200 powerful template in its engine</div>
+                      <input type="text" id="a2">
+                    </li>
+                  </div>
+                  <div class="add">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
+                        <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                            
+                    Add more features of the product
+                  </div>
                 </ul>
                 <div class="btns">
                     <a href="#prospects" class="btn-light-blue form-nav">Previous</a>
-                  <a href="#preorganised" class="btn-blue  form-nav">Next</a>
+                  <a href="#preorganised" class="btn-blue form-nav">Next</a>
                 </div>
               </div>
 
               <div id="preorganised" class="questions">
                 <ul>
-                    <li class="question" id="q1">
-                      <label class="label">WHAT IS NOT WORKING FOR YOUR PROSPECT THROUGH PAST SOLUTION?</label>
-                        <div class="example">“Ex: hired professional copywriter</div>
-
-                      <input type="text">
-                      </li>
-                      <li class="question" id="q1">
-                      <label class="label" >WHICH RESULTS TO</label>
-                      <input type="text">
-                      <div class="add">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" stroke="#4834D4"/>
-                              <path d="M12 17V7" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                              <path d="M7 12H17" stroke="#4834D4" stroke-width="2" stroke-linecap="round"/>
-                          </svg>                            
-                          Add more
-                      </div>
-                    </li>
-                    <li class="question" id="q1">
-                      <label class="label">WHAT HAPPENED THAT CHANGED EVERYTHING FOR YOU?</label>
-                      <div class="example">“Ex: discovered a secret blue print that made my journey a lot easier and better
-                    </div>
-                      <input type="text">
-                      </li>
-                      <li class="question" id="q1">
-                        <label class="label" >WHAT HAPPENED THAT CHANGED EVERYTHING FOR YOU </label>
-                        <div class="example">“Ex: discovered a secret blue print that made my journey a lot easier and better</div>
-                        <input type="text">
-                      </li>
-                      <li class="question" id="q1">
-                      <label class="label" >WHAT IS YOUR GUARANTEE?</label>
-                      <div class="example">“Ex: 30 days</div>
-                      <input type="text">
-                    </li>
+                  <li class="question">
+                    <label class="label" >What is not working for your prospect through past solutions(1)? </label>
+                    <div class="example">(Ex: Hired expensive copywriters)</div>
+                    <input type="text" id="q19">
+                  </li>
+                  <li class="question">
+                    <label class="label">Which ended up in (Consequence 1)</label>
+                    <div class="example">(Ex: Wasted a lot of money)
+                        </div>
+                    <input type="text" id="q20">
+                  </li>
+                  <li class="question">
+                    <label class="label">What is not working for your prospect through past solutions(2)? </label>
+                    <div class="example">(Ex: Bought copywriting manuals)</div>
+                    <input type="text" id="q21">
+                  </li>
+                  <li class="question">
+                    <label class="label">Which result in (Consequence 2)</label>
+                    <div class="example">(Ex: Got stuck and confused)</div>
+                    <input type="text" id="q22">
+                  </li>
+                  <label class="label">What is not working for your prospect through past solutions(3)? </label>
+                  <div class="example">(Ex: Bought copywriting manuals)</div>
+                  <input type="text" id="q23">
+                </li>
+                <li class="question">
+                  <label class="label">Which led to (Consequence 3)</label>
+                  <div class="example">(Ex: Got stuck and confused)</div>
+                  <input type="text" id="q24">
+                </li>
+                <li class="question">
+                  <label class="label">What is your guarantee?</label>
+                  <div class="example">(Ex: 30 days)</div>
+                  <input type="text" id="q26">
+                </li>
                   </ul>
                 <div class="btns">
                     <a href="#proposals" class="btn-light-blue form-nav">Previous</a>
@@ -196,8 +210,8 @@
               </h2>
               <button aria-label="Close modal" data-micromodal-close class="close-btn">
                 <svg data-micromodal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
-                  <path d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
+                  <path data-micromodal-close d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
+                  <path data-micromodal-close d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
                 </svg>                
               </button>
             </header>
@@ -216,6 +230,145 @@
             </div>
           </div>
         </div>
+    </div>
+
+    <div class="email-templates hide">
+      <div class="email-1">
+        <p class="text-bold">Day 1</p>
+        <p> <span class="text-bold">Subject</span>: Your download is ready</p>
+        <p><span class="text-bold">Body</span>:</p>
+        <p>Hey! <span class="q1"></span> here and, first things first, I wanted to say hello and make sure that you got your download.</p>
+        <p>You Can Download it Here (keep on reading...)</p>
+        <p>If you'd like a little more info about how to <span class="q8"></span>, I want you to make sure you check out the download. (I know you've really been struggling with <span class="q6"></span>, and this is really going to help you out!)</p>
+        <p>Enjoy and stay tuned for more cool stuff.</p>
+        <span class="q1"></span>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="email-2">
+
+        <p class="text-bold">Day 2</p>
+        <p><span class="text-bold">Subject</span>: What if you knew how to <span class="q8"></span> (no cost)</p>
+        <span class="text-bold">Body</span>:
+        <p>I wanted to write you a quick message about something that I thought was amazing.</p>
+        <p>There aren't many people in the world that will understand why this is so important.</p>
+        <p>As soon as I saw it, I instantly knew you'd know why this is great for people like us.</p>
+        <p>(LINK TO ARTICLE/VIDEO RELATED TO PROBLEM Freebie)</p>
+        <p>I'm sure you'll see I was so excited!</p>
+        <p><span class="q1"></span></p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="email-3">
+        <p class="text-bold">Day 3</p>
+        <p><span class="text-bold">Subject</span>: You'll just wish you knew sooner.</p>
+        <p><span class="text-bold"> Body</span> :</p>
+        <p>Hey! One of the questions that I always get asked is how to <span class="q8"></span>.</p>
+        <p>There are a ton of solutions out there but it seems like people are constantly over-complicating this. Today I wanted to let you in on the secret.</p>
+        <p>You'll Love "My Secret" Because it has...</p>
+        <p class="hide"><span class="b1"></span> – <span class="b2"></span></p>
+        <p class="hide"><span class="b3"></span> – <span class="b4"></span></p>
+        <p class="hide"><span class="b5"></span> – <span class="b6"></span></p>
+        <p class="hide"><span class="b7"></span> – <span class="b8"></span></p>
+        <p class="hide"><span class="b9"></span> – <span class="b10"></span></p>
+        <p class="hide"><span class="b11"></span> – <span class="b12"></span></p>
+        <p class="hide"><span class="b13"></span> – <span class="b14"></span></p>
+        <p class="hide"><span class="b15"></span> – <span class="b16"></span></p>
+        <p class="hide"><span class="b17"></span> – <span class="b18"></span></p>
+        <p class="hide"><span class="b19"></span> – <span class="b20"></span></p>
+        <p class="hide"><span class="b21"></span> – <span class="b22"></span></p>
+        <p class="hide"><span class="b23"></span> – <span class="b24"></span></p>
+        <p class="hide"><span class="b25"></span> – <span class="b26"></span></p>
+        <p class="hide"><span class="b27"></span> – <span class="b28"></span></p>
+        <p class="hide"><span class="b29"></span> – <span class="b30"></span></p>
+        <p class="hide"><span class="b31"></span> – <span class="b32"></span></p>
+        <p class="hide"><span class="b33"></span> – <span class="b34"></span></p>
+        <p class="hide"><span class="b35"></span> – <span class="b36"></span></p>
+        <p class="hide"><span class="b37"></span> – <span class="b38"></span></p>
+        <p class="hide"><span class="b49"></span> – <span class="b40"></span></p>
+        <p>Now... I have to be honest. Some may say I cheat a little bit, but you won't blame me when you see how much it'll simplify your life. Plus, I happened to find a great deal on it this week so I thought you'd like to see it.</p>
+        <p>Click here to check it out. (LINK)</p>
+        <p>I know you're sick of struggling with <span class="q6"></span>. So if you use my shortcut (LINK) you'll be able to knock out this problem even quicker</p>
+        <p>Hit Reply if you have any questions. Talk Soon!</p>
+        <span class="q1"></span>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="email-4">
+        <p class="text-bold">Day 4</p>
+        <p><span class="text-bold">Subject</span>: Oh no, we're about to...</p>
+        <p>Close this down.</p>
+        <p>Unfortunately <span class="q5"></span>. This is because <span class="q25"></span>.</p>
+        <p>I remember how awful it was, struggling with <span class="q6"></span>. And I know how badly you want to <span class="q8"></span>. So I thought I'd reach out today and make sure you get in on this before you miss out.</p>
+        <p>Click here to secure your <span class="q4"></span> here now.</p>
+        <p>Talk soon,</p>
+        <span class="q1"></span>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="email-5">
+        <p class="text-bold">Day 5</p>
+        <p><span class="text-bold">Subject</span>: Ready to <span class="q8"></span> with success?</p>
+        <p>You've been trying to <span class="q8"></span>, and I'd be willing to bet you've tried a million different solutions that have blown up in your face</p>
+        <p>(Don't worry, I went through the trenches too!)</p>
+        <p>In order to <span class="q8"></span>?</p>
+        <p>* You've <span class="q19"></span> which just resulted in <span class="q20"></span>.</p>
+        <p>* You've <span class="q21"></span> which led to <span class="q22"></span>.</p>
+        <p>* You've <span class="q23"></span> which just ended up in <span class="q24"></span>.</p>
+        <p>I know I've been blowing up your inbox over the last several days, but it's because I want to save you from the grief that I went through.</p>
+        <p>And because <span class="q5"></span>, I really want to make sure you don?t miss out.</p>
+        <p>(no pressure, you're backed by the <span class="q26"></span> guarantee!)</p>
+        <p>Click here to get started right now!</p>
+        <p>Talk to you soon,</p>
+        <span class="q1"></span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="email-6">
+          <p class="text-bold">Day 6</p>
+          <p><span class="text-bold">Subject</span>: [Last Call] Let's make this easy for you.</p>
+          <p>Alright...</p>
+          <p>We've talked a lot this week. Because I know you want to <span class="q8"></span>.</p>
+          <p>I'll be honest. I spent a lot of time over-complicating this.</p>
+          <p>If I could change anything, it'd be to go back and start using <span class="q4"></span> sooner.</p>
+          <p>The Reason why is because it has?</p>
+          <p class="hide"><span class="b1"></span> – <span class="b2"></span></p>
+          <p class="hide"><span class="b3"></span> – <span class="b4"></span></p>
+          <p class="hide"><span class="b5"></span> – <span class="b6"></span></p>
+          <p class="hide"><span class="b7"></span> – <span class="b8"></span></p>
+          <p class="hide"><span class="b9"></span> – <span class="b10"></span></p>
+          <p class="hide"><span class="b11"></span> – <span class="b12"></span></p>
+          <p class="hide"><span class="b13"></span> – <span class="b14"></span></p>
+          <p class="hide"><span class="b15"></span> – <span class="b16"></span></p>
+          <p class="hide"><span class="b17"></span> – <span class="b18"></span></p>
+          <p class="hide"><span class="b19"></span> – <span class="b20"></span></p>
+          <p class="hide"><span class="b21"></span> – <span class="b22"></span></p>
+          <p class="hide"><span class="b23"></span> – <span class="b24"></span></p>
+          <p class="hide"><span class="b25"></span> – <span class="b26"></span></p>
+          <p class="hide"><span class="b27"></span> – <span class="b28"></span></p>
+          <p class="hide"><span class="b29"></span> – <span class="b30"></span></p>
+          <p class="hide"><span class="b31"></span> – <span class="b32"></span></p>
+          <p class="hide"><span class="b33"></span> – <span class="b34"></span></p>
+          <p class="hide"><span class="b35"></span> – <span class="b36"></span></p>
+          <p class="hide"><span class="b37"></span> – <span class="b38"></span></p>
+          <p class="hide"><span class="b49"></span> – <span class="b40"></span></p>
+          <p>I don't want you to waste anymore time.</p>
+          <p>But just know, <span class="q5"></span>.</p>
+          <p>Click here to get started right now (closing soon!)</p>
+          <p>(no pressure, you're backed by the <span class="q26"></span> guarantee!)</p>
+          <p>Click here to get started right now!</p>
+          <p>Talk to you soon,</p>
+          <span class="q1"></span>
+          <p>P.S. Like I said, <span class="q5"></span>. The only way to make sure you get in is to click the link above. Don't worry, you're always protected by the <span class="q26"></span>guarantee.</p>
+      </div>
     </div>
         @push('script')
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -515,8 +515,11 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{asset('publics/header&sidenav.js')}}"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="{{mix('js/app.js')}}"></script>
+<script src="{{asset('js/letters.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
     <script>
-        MicroModal.init();
+        // MicroModal.init();
 
 function populateInputs(){
     const inputs = JSON.parse(
@@ -561,7 +564,6 @@ async function DownloadPDF(){
   })
 }
     </script>
-<script src="{{mix('js/app.js')}}"></script>
-<script src="{{asset('js/letters.js')}}"></script>
+
 @endpush
 @endsection
