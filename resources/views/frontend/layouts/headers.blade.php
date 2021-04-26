@@ -31,7 +31,7 @@
         <div class="page__header__breadcrumb">
             <div class="generate">
                 <h2>Welcome, {{auth()->user()->name}}</h2>
-                <p>Header description goes here</p>
+                {{-- <p>Header description goes here</p> --}}
             </div>
             <div class="create__new__project">
                 @if(Session::get('project_id')==null)

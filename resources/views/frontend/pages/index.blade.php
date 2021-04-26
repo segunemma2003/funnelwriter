@@ -69,8 +69,10 @@
                                 <img src="images/folder_orange.svg" alt="folder-orange">
                                 <p class="items__created orange">{{  $recent->items()->count()}} items created</p>
                             </div>
-                            <p class="project__title text-blue">{{ $recent->name }}</p>
+                            {{-- <p class="project__title text-blue">{{ $recent->name }}</p> --}}
+                            <a href="{{route('project.select',$recent->id)}}" class="project__title text-blue">{{ $recent->name }}</a>
                             <p class="project__description text-light-blue">{{ $recent->desc }}</p>
+
                         </div>
                         @endforeach
 

@@ -100,10 +100,10 @@
                 </ul>
             </div>
 
-            <div class="wp__plugin">
+            {{-- <div class="wp__plugin">
                 <p class="wp">WP plugin</p>
                 <p class="cs">Coming Soon</p>
-            </div>
+            </div> --}}
 
             <div class="management__links">
                 <p class="title">Management</p>
