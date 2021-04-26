@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
-use PDF;
 use \PhpOffice\PhpWord\Settings;
 class DocxGeneratorController extends Controller
 {
 
-    public function  horsePDF(){
+
+
+    public function  horsePDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."horsesummary.docx");
@@ -18,22 +20,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function horseDOC(Request $request){
@@ -45,16 +47,16 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-  
-    public function  web3PDF(){
+
+    public function  web3PDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."web3summary.docx");
@@ -63,22 +65,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function web3DOC(Request $request){
@@ -90,15 +92,15 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  venetianPDF(){
+    public function  venetianPDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."venetiansummary.docx");
@@ -107,22 +109,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function venetianDOC(Request $request){
@@ -134,14 +136,14 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-       
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  vampirePDF(){
+    public function  vampirePDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."vampiresummary.docx");
@@ -150,22 +152,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function vampireDOC(Request $request){
@@ -176,14 +178,14 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-       
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  visitorPDF(){
+    public function  visitorPDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."visitorsummary.docx");
@@ -192,22 +194,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function visitorDOC(Request $request){
@@ -218,15 +220,15 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  narativePDF(){
+    public function  narativePDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."narativesummary.docx");
@@ -235,22 +237,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function narativeDOC(Request $request){
@@ -261,15 +263,15 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  knockPDF(){
+    public function  knockPDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."knocksummary.docx");
@@ -278,22 +280,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function knockDOC(Request $request){
@@ -304,15 +306,15 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  ticketPDF(){
+    public function  ticketPDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."ticketsummary.docx");
@@ -321,22 +323,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function ticketDOC(Request $request){
@@ -347,16 +349,16 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-   
-    public function  bridgePDF(){
+
+    public function  bridgePDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."bridgesummary.docx");
@@ -365,22 +367,22 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function bridgeDOC(Request $request){
@@ -391,61 +393,61 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-       
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  squeezePDF(){
+    public function  squeezePDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."squeezesummary.docx");
         $toSave=time().".docx";
         try{
             foreach($data as $key=>$value){
-                
+
                 if($key=='list'){
-                    
+
                         // var_dump($data[$key][0]);
                         $list=[];
                         if(isset($data[$key][0])){
-                          
+
                             for($i=0; $i<count($data[$key][0]); $i++){
                                 $d=$data[$key][0][$i];
                                 array_push($list,"* {$d}");
                             }
-                            $my_template->setValue($key,implode($list,"\n\n\n\n\n\n\n"));
+                            $my_template->setValue($key,implode("\n\n\n\n\n\n\n",$list));
                         }else{
-                           
-                            $my_template->setValue($key,implode($data[$key],"\n\n\n\n\n\n\n"));
+
+                            $my_template->setValue($key,implode("\n\n\n\n\n\n\n",$data[$key]));
                         }
-                        
-                        
-                    
+
+
+
                 }else{
-                    
+
                     $my_template->setValue($key,$data[$key]);
                 }
-              
+
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function squeezeDOC(Request $request){
@@ -454,41 +456,41 @@ class DocxGeneratorController extends Controller
         $toSave=time().".docx";
         try{
             foreach($data as $key=>$value){
-                
+
                 if($key=='list'){
-                    
+
                         // var_dump($data[$key][0]);
                         $list=[];
                         if(isset($data[$key][0])){
-                          
+
                             for($i=0; $i<count($data[$key][0]); $i++){
                                 $d=$data[$key][0][$i];
                                 array_push($list,"* {$d}");
                             }
-                            $my_template->setValue($key,implode($list,"\n\n\n\n\n\n\n"));
+                            $my_template->setValue($key,implode("\n\n\n\n\n\n\n",$list));
                         }else{
-                           
-                            $my_template->setValue($key,implode($data[$key],"\n\n\n\n\n\n\n"));
+
+                            $my_template->setValue($key,implode("\n\n\n\n\n\n\n",$data[$key]));
                         }
-                        
-                        
-                    
+
+
+
                 }else{
-                    
+
                     $my_template->setValue($key,$data[$key]);
                 }
-              
+
             }
-       
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
     }
-    public function  shortPDF(){
+    public function  shortPDF(Request $request){
         $pdfname="offres_".time().".pdf";
         $data=json_decode($request->all()['data'],true);
         $my_template = new \PhpOffice\PhpWord\TemplateProcessor(public_path()."/"."squeezesummary.docx");
@@ -502,24 +504,24 @@ class DocxGeneratorController extends Controller
                 }else{
                     $my_template->setValue($key,$data[$key]);
                 }
-               
+
             }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
     }
     public function shortDOC(Request $request){
@@ -535,12 +537,12 @@ class DocxGeneratorController extends Controller
                 }else{
                     $my_template->setValue($key,$data[$key]);
                 }
-               
+
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
@@ -548,7 +550,7 @@ class DocxGeneratorController extends Controller
 
     public function letterPDF(Request $request){
 
-      
+
         $pdfname="offres_".time().".pdf";
 
         $data=json_decode($request->all()['data'],true);
@@ -558,28 +560,28 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
     //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
-    
+
         }
-      
-       
-       
+
+
+
         // chmod($toSave,0644);
         // PDF::loadFile(public_path()."/".$toSave)->save($pdfname);
-      
+
     }
     public function letterDOC(Request $request){
         $data=json_decode($request->all()['data'],true);
@@ -589,10 +591,10 @@ class DocxGeneratorController extends Controller
             foreach($data as $key=>$value){
                 $my_template->setValue($key,$data[$key]);
             }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
@@ -607,13 +609,13 @@ class DocxGeneratorController extends Controller
             $my_template->setValue($key,$data[$key]);
         }
         // for($i=1; $i<=count($data); $i++){
-          
+
         //     $my_template->setValue("q{$i}", $data["q{$i}"]);
         // }
-        
-       
+
+
         $my_template->saveAs(public_path($toSave));
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
         return response()->json(["data"=>$toSave]);
@@ -628,28 +630,28 @@ class DocxGeneratorController extends Controller
         foreach($data as $key=>$value){
             $my_template->setValue($key,$data[$key]);
         }
-        
-        
-       
+
+
+
         $my_template->saveAs(public_path($toSave));
         $domPdfPath = base_path('vendor/dompdf/dompdf');
         \PhpOffice\PhpWord\Settings::setPdfRendererPath($domPdfPath);
         \PhpOffice\PhpWord\Settings::setPdfRendererName('DomPDF');
-        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave)); 
+        $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($toSave));
 
         //Save it into PDF
     $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-    $PDFWriter->save($pdfname); 
+    $PDFWriter->save($pdfname);
     return response()->json(["data"=>$pdfname]);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             //handle exception
         }
-      
+
     }
     public function salesPDFs(Request $request)
     {
         $data=json_decode($request->all()['data'],true);
-       
+
         $pw = new \PhpOffice\PhpWord\PhpWord();
         $styleTable = array('borderColor'=>'006699',
               'borderSize'=>6,
@@ -670,18 +672,18 @@ class DocxGeneratorController extends Controller
         $section->addText("");
         $section->addText("You're smart, driven and you've got big plans to push your business forward. But trying to {$data['q8']} is not a small task.
         As you struggle to keep your business afloat, stress has gotten the best of you
-        
+
         You have:
-        
+
         ... and every flop has left you with less than desirable results.
-        
+
         It's extremely frustrating when you know that you're capable of bigger and better things.");
         $section->addText("");
         $section->addText("But There is Good News!");
         $section->addText("Hey there, my name is {$data['q15']} and yes, I know exactly how you're feeling.
 
         These days, I've managed to achieve quite a bit of success... I'm able to {$data['q16']}, I can also {$data['q17']}, and I'm very lucky in that I can {$data['q18']}.
-        
+
         But I'll be honest...");
         $section->addText("");
         $section->addText("Life As a Business Owner Definitely Didn't Start Out This Way...");
@@ -690,13 +692,13 @@ class DocxGeneratorController extends Controller
 
         When I first started running my own business, .
         None of it worked out for me and I just ended up ready to quit, thinking I would never be able to {$data['q8']}.
-        
+
         Of course, you know exactly what I'm talking about, right?
         Does Any of This Sound Familiar?
         · You've {$data['q9']} which just resulted in {$data['q10']}.
-        
+
         · You've {$data['q11']} which led to {$data['q12']}.
-        
+
         · You've {$data['q13']} which just ended up in {$data['q14']}.");
         $section->addText("");
         $section->addText("Just Before I Was Ready to Close Up Shop, A Stroke of Luck Changed Everything.");
@@ -704,12 +706,12 @@ class DocxGeneratorController extends Controller
         $section->addText("You can only run into so many walls before you get so frustrated that the only option left seems to be quitting.
 
         I was just about at that point when I {$data['q22']}.
-        
+
         As soon as I discovered this, everything instantly got easier.
-        
+
         With this amount of success, I knew I couldn't keep it on lockdown.
         Since then, I've run into multiple others who encountered the same, never-ending battle I went through. And it seemed pretty unfair to keep it to myself... especially since it's been such a huge stepping stone in my success.
-        
+
         So I'd like to let you in on the \"secret\".");
         $section->addText("");
         $section->addText("Introducing...");
@@ -719,9 +721,9 @@ class DocxGeneratorController extends Controller
         $section->addText("So what exactly is this going to do for you? Can a simple {$data['q5']} really turn everything around your business?
 
         Yes. Yes it can.
-        
+
         The entrepreneur life can be stressful at times. That's the price we pay being so self-reliant.
-        
+
         But you don't have to struggle with {$data['q3']} anymore.");
         $section->addText("");
         $section->addText("Here's How {$data['q23']} Will Benefit You:");
@@ -732,22 +734,22 @@ class DocxGeneratorController extends Controller
         $section->addText("I've already shared this secret to a select group of business owners already. Truth be told, I wanted to guarantee that this would actually work time and time again.
 
         More importantly, I wanted to make sure you'd achieve the same results.
-        
+
         And well... I'll let them speak for themselves...");
         $section->addText("");
         $section->addText("[TESTIMONIAL SECTION END]");
         $section->addText("");
         $section->addText("\"Yes! I'd Love to Get in On This, But What's the Catch?\"
         You've heard what I have to say. This {$data['q5']} is wonderful. But what's the catch?
-        
+
         I'll be honest, you could skip over this offer today and {$data['q45']}.
-        
+
         But you'd have to shell out at least {$data['q46']}.
-        
+
         But don't worry.
-        
+
         You won't have to pay anywhere near that amount today.
-        
+
         In fact, I'm actually going to sweeten the deal for you right now.");
         $section->addText("");
         $section->addText("[BONUS SECTION START]");
@@ -762,19 +764,19 @@ class DocxGeneratorController extends Controller
 
         {$data['q1']}. Once I close down the offer we won't release it again at this price. I'm doing this because {$data['q59']}.
         Not to worry though.
-        
+
         To make your decision extremely easy, I'm going to remove all risk!
-        
+
         Yup, that's right. I want to guarantee you take advantage of this offer today, and feel good about it.
-        
+
         You're protected by our {$data['q60']} money-back guarantee. If for any reason at all you're not completely satisfied, get in touch with our team and we will give you a complete refund. It's that simple.
-        
+
         \"Yes, I Want In! How Much Will This Cost Me?\"
-        
+
         I'm stoked for you to jump in and get started. Even more so, I can't wait for you to see the results that are waiting for you on the other side.
-        
+
         Here's a quick recap of everything you'll receive when you secure your copy right now:
-        
+
         · {$data['q23']}. And You're also Getting:");
         $section->addText("");
         $section->addText("When You Secure Your Copy of {$data['q23']} Today, You'll Get a Total Value of Over {$data['q61']} For ONLY...
@@ -785,10 +787,10 @@ class DocxGeneratorController extends Controller
         $section->addText("Before I let you go, I wanted to send out a big thank you for reading this letter.
 
         I'm truly excited for you to get started with {$data['q23']} and see what a huge impact this will have on the success of your business.
-        
+
         Talk to you soon, {$data['q15']}
         P.S. You could skip over this offer, but then your business will stay right where you are now. Let me help you get out of the rut you've been in. Start achieving the results you deserve right now. Grab {$data['q23']} by clicking the buy button above.
-        
+
         P.P.S. Just a reminder, {$data['q1']}. But don't worry. You're protected by our money back guarantee. So you can try it out today, and enjoy peace of mind. All you have to do is click the buy button above to get started.");
         $section->addText("");
         $section->addText("[Optin Form Goes Here]");
@@ -807,16 +809,16 @@ class DocxGeneratorController extends Controller
         // // $gn=$pw->loadTemplate($nameTosave);
         // $Content = \PhpOffice\PhpWord\IOFactory::load(public_path($nameTosave));
         // $PDFWriter = \PhpOffice\PhpWord\IOFactory::createWriter($Content,'PDF');
-        // $PDFWriter->save($pdfname); 
+        // $PDFWriter->save($pdfname);
         chmod($nameTosave,0644);
         PDF::loadFile(public_path()."/".$nameTosave)->save($pdfname);
         return response()->json(["data"=>$pdfname]);
     }
     public function generate_offer(Request $request)
     {
-        
+
         $data=$request->all()['data'];
-       
+
         $info=json_decode($data['info'],true);
          $offers=json_decode($data['offers']);
         $bonus=json_decode($data['bonus']);
@@ -832,7 +834,7 @@ $pw->setDefaultFontName('Tahoma');
 $pw->setDefaultFontSize(10);
 
         $section = $pw->addSection();
-       
+
         $section->addText(
             $info['item'],
             array('name' => 'Tahoma', 'size' => 25, 'color' => '1B2232', 'bold' => true)
@@ -843,7 +845,7 @@ $pw->setDefaultFontSize(10);
         );
         $section->addText( "Benefit",  array('name' => 'Tahoma', 'size' => 16, 'color' => '1B2232', 'bold' => true));
         $section->addText(
-           
+
             $info['benefit']
         );
         $section->addTextBreak(1);
@@ -856,7 +858,7 @@ $pw->setDefaultFontSize(10);
             $table->addRow();
             $table->addCell(1750)->addText(array_keys((array) $offers[$r])[0]);
             $table->addCell(1750)->addText(array_values((array) $offers[$r])[0]);
-            
+
         }
         $section->addText("");
 
@@ -866,10 +868,10 @@ $pw->setDefaultFontSize(10);
         $table2->addCell(1750)->addText("price");
         for ($r = 0; $r < count($offers); $r++) {
             $table2->addRow();
-            
+
             $table2->addCell(1750)->addText(array_keys((array) $offers[$r])[0]);
             $table2->addCell(1750)->addText(array_values((array) $offers[$r])[0]);
-            
+
         }
 
 
@@ -877,7 +879,7 @@ $pw->setDefaultFontSize(10);
         $nameTosave="sales_".auth()->user()->name."_".time().".docx";
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($pw, 'Word2007');
         $objWriter->save($nameTosave);
-        
+
         return response()->json(["data"=>$nameTosave]);
         //download path
         // $download_path = storage_path('app/'.$id.'.zip');

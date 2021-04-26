@@ -34,10 +34,18 @@
                 <p>Header description goes here</p>
             </div>
             <div class="create__new__project">
-                <button>
+                @if(Session::get('project_id')==null)
+                <a href="{{ route('project.create') }}" class="btn  btn-lg btn-primary">
                     <i class="fas fa-plus"></i>
                     Create a new project
-                </button>
+                </a>
+                @else
+             {{ $sharedP }}<br/>
+             <a href="{{ route('project.create') }}" class="btn  btn-lg btn-primary">
+                <i class="fas fa-plus"></i>
+                Add a new project
+            </a>
+                @endif
             </div>
         </div>
     </header>

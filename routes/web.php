@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProjectsController;
+use App\Models\Projects;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +24,11 @@ Route::get('/ppt',[App\Http\Controllers\PresentationController::class,'generateP
 Route::group(['middleware'=>'auth'],function(){
 
 
-Route::get('/', function () {
-    return view('frontend.pages.index');
-})->name('index');
+Route::get('/', [PagesController::class,'index'])->name('index');
+Route::get('/projects/select/{id}',[ProjectsController::class,'select'])->name('project.select');
+Route::get('/projects',[ProjectsController::class,'index'])->name('project');
+Route::get('/projects/create',[ProjectsController::class,'create'])->name('project.create');
+Route::post('/projects/create',[ProjectsController::class,'store'])->name('project.store');
 Route::get('/email-copy', function () {
     return view('frontend.pages.email-copy');
 })->name('email-copy');
@@ -97,9 +103,7 @@ Route::group(['prefix'=>'ads'],function(){
 });
 
 Route::group(['prefix'=>'myscript'],function(){
-    Route::get('/', function () {
-        return view('frontend.pages.myscript');
-    })->name('myscript');
+    Route::get('/', [PagesController::class,'script'])->name('myscript');
     Route::get('/affiliateboxagency', function () {
         return view('frontend.pages.myScripts.afiliateboxagency');
     })->name('affiliateboxagency');
@@ -230,9 +234,8 @@ Route::post('/webinar/ppt',[App\Http\Controllers\PresentationController::class,'
 Route::get('/funnel', function () {
     return view('frontend.pages.funnel-launch-planner');
 })->name('funnel-launch');
-Route::get('/settings', function () {
-    return view('frontend.pages.settings');
-})->name('settings');
+Route::get('/settings', [PagesController::class,'settings'])->name('settings');
+Route::post('/settings', [PagesController::class,'saveSettings'])->name('settings.save');
 
 Route::get('/offer-generator', function () {
     return view('frontend.pages.offer-generator');

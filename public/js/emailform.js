@@ -6,7 +6,7 @@ nextbtns.forEach(nextbtn => nextbtn.addEventListener("click", navigate));
 formNavs.forEach(formNav => formNav.addEventListener("click", navigate));
 let activeQuestion = document.querySelector(".questions");
 const statuses = [...document.querySelectorAll(".status")];
-const questions = [...document.querySelectorAll(".questions")]; 
+const questions = [...document.querySelectorAll(".questions")];
 const form = select(".main__content form");
 bind(form, "input", updateStatus);
 const generateBtn = document.querySelector("button.btn-blue");
@@ -130,5 +130,6 @@ function fillEditor() {
     })
     const emailsClone = emailTemplates.cloneNode(true);
     emailsClone.classList.remove("hide");
+    console.log(emailsClone.innerHTML);
     document.querySelector(".note-editable").innerHTML = emailsClone.innerHTML;
 }

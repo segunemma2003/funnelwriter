@@ -2,6 +2,7 @@
 @section('content')
 @push('style')
 @endpush
+
 <main class="main__content">
             <div class="dashboard">
                 <!-- Content Goes in here -->
@@ -22,7 +23,7 @@
                             <p>No of scripts created</p>
                         </div>
                     </div>
-                    <div class="monthly__stats">
+                    {{-- <div class="monthly__stats">
                         <div class="monthly__stats__header">
                            <p class="title">Monthly Statistics</p>
                             <img class="monthly__stats__header__image" src="images/monthly_stats.svg" alt="bar-chart">
@@ -37,7 +38,7 @@
                             <p class="active">Nov</p>
                             <p>Dec</p>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- <div class="funnels__number">
                         <div class="funnels__active">
                             <div class="funnels__active__stats">
@@ -52,16 +53,13 @@
                         </div>
                     </div> --}}
                 </div>
-                @if(count($recents)>0)
+
                 <div class="recent__projects">
                     <div class="recent__projects__header">
-                        <h2 class="title">Recent Projects</h2>
-                        <div class="see_more">
-                            <a class="btn" href="{{ route('myscript') }}">See more</a>
-                            <img src="images/see-more.svg" alt="arrow-left">
-                        </div>
-                    </div>
+                        <h2 class="title">All Projects</h2>
 
+                    </div>
+                    @if(count($recents)>0)
                     <div class="projects__container">
                         @foreach($recents as $recent)
                         <div class="project">
@@ -71,13 +69,16 @@
                             </div>
                             <p class="project__title text-blue">{{ $recent->name }}</p>
                             <p class="project__description text-light-blue">{{ $recent->desc }}</p>
+                            <a href="{{ route('project.select',$recent->id) }}" class='btn btn-lg btn-success'>Select</a>
                         </div>
                         @endforeach
 
 
                     </div>
+                    @endif
+                    <div>No projects is created</div>
                 </div>
-                @endif
+
                 {{-- <div class="newly__created__copies">
                     <div class="newly__created__copies__header">
                         <h2 class="title">Newly Created Copies & Scripts</h2>

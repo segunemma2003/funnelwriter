@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableProjects extends Migration
+class AddToTableScripts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,9 @@ class CreateTableProjects extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('scripts', function (Blueprint $table) {
+            $table->text('desc')->nullable();
+        });
     }
 
     /**
@@ -23,6 +25,9 @@ class CreateTableProjects extends Migration
      */
     public function down()
     {
-        //
+
+        Schema::table('scripts', function (Blueprint $table) {
+          $table->dropColumn('desc');
+        });
     }
 }

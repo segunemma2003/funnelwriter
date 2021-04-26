@@ -14,6 +14,7 @@
                         </a>
 
                     </li>
+                @if(Session::get('project_id') !=null)
                     <li>
                         <a href="{{route('email-copy')}}" class="{{request()->routeIs('email-copy')?'active':''}}">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icons">
@@ -76,6 +77,7 @@
                             <p>Video sales letter</p>
                         </a>
                     </li>
+                    @endif
                     <!-- <li>
                         <a href="{{route('webinar-writer')}}" class="{{request()->routeIs('webinar-writer')?'active':''}}">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icons">

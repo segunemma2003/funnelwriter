@@ -18,8 +18,8 @@ public function genPptvid(Request $request)
 
       $data=(array) $request->all()['$data'];
       $objPHPPowerPoint->removeSlideByIndex(0);
-      $this->slide1($objPHPPowerPoint,"How to achieve {$data['fw1']}, IN {$data['fw26']},\n 
-      WITHOUT {$data['fw12']}. \n (EVEN IF {$date['fw84']})");
+      $this->slide1($objPHPPowerPoint,"How to achieve {$data['fw1']}, IN {$data['fw26']},\n
+      WITHOUT {$data['fw12']}. \n (EVEN IF {$data['fw84']})");
       $this->slide1($objPHPPowerPoint,"BEFORE WE CONTINUE… \nHere’s what you’re going to discover during this workshop…");
       $this->slide1($objPHPPowerPoint,"How you can {$data['fw9']} using the \n {$data['fw6']} Method… without {$data['fw3']},\n and without {$data['fw4']}...");
       $this->slide1($objPHPPowerPoint,"The counter-intuitive way to \n brand yourself as an {$data['fw5']} so \n you can {$data['fw7']}…");
@@ -162,10 +162,10 @@ public function genPptvid(Request $request)
       //  $this->generatePPt1("$file.pptx");
       return response()->json(['data'=>"powerpoint/{$file}.pptx"]);
 
-      
+
 }
     public function generateDoc(Request $request){
-       
+
         $objPHPPowerPoint = new PhpPresentation();
 
 $data=(array) $request->all()['$data'];
@@ -174,7 +174,7 @@ $objPHPPowerPoint->removeSlideByIndex(0);
         $this->slide1($objPHPPowerPoint,"The good and bad");
         $this->slide1($objPHPPowerPoint,"Today, {$data[5]}");
       $this->slide1($objPHPPowerPoint,"$data[6]. why?");
-      $this->slide1($objPHPPowerPoint,$data[7]); 
+      $this->slide1($objPHPPowerPoint,$data[7]);
       $this->slide1($objPHPPowerPoint,$data[8]);
       $this->slide1($objPHPPowerPoint,$data[9]);
       $this->slide1($objPHPPowerPoint,$data[10]);
@@ -207,19 +207,19 @@ $objPHPPowerPoint->removeSlideByIndex(0);
       $this->slide1($objPHPPowerPoint,$data[37]??null);
       $this->slide1($objPHPPowerPoint,$data[38]??null);
       $this->slide1($objPHPPowerPoint,$data[39]?? null);
-      
+
       $this->slide2($objPHPPowerPoint,"Here is exactly what you get with \"$data[15]\"",$data[40]??null,$data[41]??null,$data[42]??null,$data[43]??null,$data[44]??null);
       $this->slide1($objPHPPowerPoint,"If You ACT NOW,You Get These bonuses");
-      $this->slide1($objPHPPowerPoint,"BONUS #1 -" .  count($data)>44?$data[45]:null); 
-      $this->slide1($objPHPPowerPoint,"BONUS #2 - " .count($data)>45?$data[46]:null); 
-      $this->slide1($objPHPPowerPoint,"BONUS #3 -" .count($data)>46?$data[47]:null); 
-      $this->slide1($objPHPPowerPoint,"Act Now- Before It's Too Late!..."); 
-      $this->slide1($objPHPPowerPoint,"Get Started with $data[15] now"); 
-      $this->slide1($objPHPPowerPoint,"If you want to"); 
-      $this->slide1($objPHPPowerPoint,"$data[17]"); 
-      $this->slide1($objPHPPowerPoint,"$data[18]"); 
-      $this->slide1($objPHPPowerPoint,"$data[19]"); 
-      $this->slide1($objPHPPowerPoint,"Then Take Action Right Now!"); 
+      $this->slide1($objPHPPowerPoint,"BONUS #1 -" .  count($data)>44?$data[45]:null);
+      $this->slide1($objPHPPowerPoint,"BONUS #2 - " .count($data)>45?$data[46]:null);
+      $this->slide1($objPHPPowerPoint,"BONUS #3 -" .count($data)>46?$data[47]:null);
+      $this->slide1($objPHPPowerPoint,"Act Now- Before It's Too Late!...");
+      $this->slide1($objPHPPowerPoint,"Get Started with $data[15] now");
+      $this->slide1($objPHPPowerPoint,"If you want to");
+      $this->slide1($objPHPPowerPoint,"$data[17]");
+      $this->slide1($objPHPPowerPoint,"$data[18]");
+      $this->slide1($objPHPPowerPoint,"$data[19]");
+      $this->slide1($objPHPPowerPoint,"Then Take Action Right Now!");
       $oWriterPPTX = IOFactory::createWriter($objPHPPowerPoint, 'PowerPoint2007');
         $file=strtotime(now());
        $oWriterPPTX->save(public_path()."/powerpoint/{$file}.pptx");
@@ -237,7 +237,7 @@ $objPHPPowerPoint->removeSlideByIndex(0);
 //       }
 // }
 public function generatePPt(Request $request){
-       
+
         $objPHPPowerPoint = new PhpPresentation();
 
 $data=(array) $request->all()['data'];
@@ -246,7 +246,7 @@ $objPHPPowerPoint->removeSlideByIndex(0);
         $this->slide1($objPHPPowerPoint,"The good and bad");
         $this->slide1($objPHPPowerPoint,"Today, {$data[5]}");
       $this->slide1($objPHPPowerPoint,"$data[6]. why?");
-      $this->slide1($objPHPPowerPoint,$data[7]); 
+      $this->slide1($objPHPPowerPoint,$data[7]);
       $this->slide1($objPHPPowerPoint,$data[8]);
       $this->slide1($objPHPPowerPoint,$data[9]);
       $this->slide1($objPHPPowerPoint,$data[10]);
@@ -279,19 +279,19 @@ $objPHPPowerPoint->removeSlideByIndex(0);
       $this->slide1($objPHPPowerPoint,$data[37]??null);
       $this->slide1($objPHPPowerPoint,$data[38]??null);
       $this->slide1($objPHPPowerPoint,$data[39]?? null);
-      
+
       $this->slide2($objPHPPowerPoint,"Here is exactly what you get with \"$data[15]\"",$data[40]??null,$data[41]??null,$data[42]??null,$data[43]??null,$data[44]??null);
       $this->slide1($objPHPPowerPoint,"If You ACT NOW,You Get These bonuses");
-      $this->slide1($objPHPPowerPoint,"BONUS #1 -" .  count($data)>44?$data[45]:null); 
-      $this->slide1($objPHPPowerPoint,"BONUS #2 - " .count($data)>45?$data[46]:null); 
-      $this->slide1($objPHPPowerPoint,"BONUS #3 -" .count($data)>46?$data[47]:null); 
-      $this->slide1($objPHPPowerPoint,"Act Now- Before It's Too Late!..."); 
-      $this->slide1($objPHPPowerPoint,"Get Started with $data[15] now"); 
-      $this->slide1($objPHPPowerPoint,"If you want to"); 
-      $this->slide1($objPHPPowerPoint,"$data[17]"); 
-      $this->slide1($objPHPPowerPoint,"$data[18]"); 
-      $this->slide1($objPHPPowerPoint,"$data[19]"); 
-      $this->slide1($objPHPPowerPoint,"Then Take Action Right Now!"); 
+      $this->slide1($objPHPPowerPoint,"BONUS #1 -" .  count($data)>44?$data[45]:null);
+      $this->slide1($objPHPPowerPoint,"BONUS #2 - " .count($data)>45?$data[46]:null);
+      $this->slide1($objPHPPowerPoint,"BONUS #3 -" .count($data)>46?$data[47]:null);
+      $this->slide1($objPHPPowerPoint,"Act Now- Before It's Too Late!...");
+      $this->slide1($objPHPPowerPoint,"Get Started with $data[15] now");
+      $this->slide1($objPHPPowerPoint,"If you want to");
+      $this->slide1($objPHPPowerPoint,"$data[17]");
+      $this->slide1($objPHPPowerPoint,"$data[18]");
+      $this->slide1($objPHPPowerPoint,"$data[19]");
+      $this->slide1($objPHPPowerPoint,"Then Take Action Right Now!");
       $oWriterPPTX = IOFactory::createWriter($objPHPPowerPoint, 'PowerPoint2007');
         $file=strtotime(now());
        $oWriterPPTX->save(public_path()."/powerpoint/{$file}.pptx");
@@ -302,7 +302,7 @@ $objPHPPowerPoint->removeSlideByIndex(0);
     public function slide1(&$objPHPPowerPoint,$data){
         // Create slide
       $currentSlide = $objPHPPowerPoint->createSlide();
-      
+
         $shape = $currentSlide->createRichTextShape()
               ->setHeight(300)
               ->setWidth(600)
@@ -318,8 +318,8 @@ $objPHPPowerPoint->removeSlideByIndex(0);
       public function slide2($objPHPPowerPoint,$data1=null,$data2=null,$data3=null,$data4=null,$data5=null,$data6=null)
       {
             $currentSlide = $objPHPPowerPoint->createSlide();
-           
-                  
+
+
         $shape = $currentSlide->createRichTextShape()
                   ->setHeight(200)
                   ->setWidth(600)
@@ -328,15 +328,15 @@ $objPHPPowerPoint->removeSlideByIndex(0);
             $shape->getActiveParagraph()->getAlignment()->setHorizontal(Alignment::HORIZONTAL_LEFT)
             ->setMarginLeft(25)
             ->setIndent(-25);
-          
-           
-            
+
+
+
             $textRun = $shape->createTextRun($data1);
             $textRun->getFont()->setBold(true)
             ->setSize(20)
             ->setColor( new Color( '000' ) );
             $shape->createBreak();
-            
+
             $shape->getActiveParagraph()->getBulletStyle()->setBulletType(Bullet::TYPE_BULLET);
             $shape->getActiveParagraph()->getFont()->setSize(20)
              ->setColor(new Color( '000' ));
@@ -344,15 +344,15 @@ $objPHPPowerPoint->removeSlideByIndex(0);
              if(!is_null($data3)){ $shape->createParagraph()->createTextRun($data3);}
              if(!is_null($data4)){  $shape->createParagraph()->createTextRun($data4);}
              if(!is_null($data5)){ $shape->createParagraph()->createTextRun($data5);}
-             if(!is_null($data6)){ 
+             if(!is_null($data6)){
                   $shape->createParagraph()->createTextRun($data6);}
-           
 
-           
-           
-          
-          
+
+
+
+
+
       }
-     
+
 
 }
